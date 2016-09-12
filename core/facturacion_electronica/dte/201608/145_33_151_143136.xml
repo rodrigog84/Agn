@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<EnvioDTE xmlns="http://www.sii.cl/SiiDte" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sii.cl/SiiDte EnvioDTE_v10.xsd" version="1.0">
+  <SetDTE ID="SetDoc">
+    <Caratula version="1.0">
+      <RutEmisor>10151321-1</RutEmisor>
+      <RutEnvia>10151321-1</RutEnvia>
+      <RutReceptor>60803000-K</RutReceptor>
+      <FchResol>2014-08-22</FchResol>
+      <NroResol>80</NroResol>
+      <TmstFirmaEnv>2016-08-25T14:31:36</TmstFirmaEnv>
+      <SubTotDTE>
+        <TpoDTE>33</TpoDTE>
+        <NroDTE>1</NroDTE>
+      </SubTotDTE>
+    </Caratula>
+    <DTE version="1.0">
+  <Documento ID="T33F145">
+    <Encabezado>
+      <IdDoc>
+        <TipoDTE>33</TipoDTE>
+        <Folio>145</Folio>
+        <FchEmis>2016-08-25</FchEmis>
+      </IdDoc>
+      <Emisor>
+        <RUTEmisor>10151321-1</RUTEmisor>
+        <RznSoc>ALBERTO ENRIQUE GARRIDO NEIRA</RznSoc>
+        <GiroEmis>Venta al por mayor de maquinaria</GiroEmis>
+        <Acteco>515009</Acteco>
+        <DirOrigen>15 ORIENTE 2 SUR No.2201</DirOrigen>
+        <CmnaOrigen>TALCA</CmnaOrigen>
+      </Emisor>
+      <Receptor>
+        <RUTRecep>77204010-5</RUTRecep>
+        <RznSocRecep>SOC. AGRICOLA LA CABAÑA LTDA.</RznSocRecep>
+        <GiroRecep>CULTIVO DE UVA DESTINADA A PRODUCCION DE</GiroRecep>
+        <DirRecep>FDO. LA CABAÑA S / N </DirRecep>
+        <CmnaRecep>SAN JAVIER</CmnaRecep>
+      </Receptor>
+      <Totales>
+        <MntNeto>33529</MntNeto>
+        <TasaIVA>19</TasaIVA>
+        <IVA>6371</IVA>
+        <MntTotal>39900</MntTotal>
+      </Totales>
+    </Encabezado>
+    <Detalle>
+      <NroLinDet>1</NroLinDet>
+      <NmbItem>Membrana Compensador K-25/I-17</NmbItem>
+      <QtyItem>3.00</QtyItem>
+      <PrcItem>9495</PrcItem>
+      <MontoItem>28487</MontoItem>
+    </Detalle>
+    <Detalle>
+      <NroLinDet>2</NroLinDet>
+      <NmbItem>Oring Valvula 31.5x4.7 Tar-85-110-150</NmbItem>
+      <QtyItem>6.00</QtyItem>
+      <PrcItem>840</PrcItem>
+      <MontoItem>5042</MontoItem>
+    </Detalle>
+    <TED version="1.0">
+  <DD>
+    <RE>10151321-1</RE>
+    <TD>33</TD>
+    <F>145</F>
+    <FE>2016-08-25</FE>
+    <RR>77204010-5</RR>
+    <RSR>SOC. AGRICOLA LA CABAÑA LTDA.</RSR>
+    <MNT>39900</MNT>
+    <IT1>Membrana Compensador K-25/I-17</IT1>
+    <CAF version="1.0">
+<DA>
+<RE>10151321-1</RE>
+<RS>ALBERTO ENRIQUE GARRIDO NEIRA</RS>
+<TD>33</TD>
+<RNG><D>128</D><H>174</H></RNG>
+<FA>2016-08-19</FA>
+<RSAPK><M>yFspuwxwkE/x5BVZFqJIvTSELYDdtQH5w4CbJTcoi2GDRwNmQh5b9ug4Tw9RaWunh6cnmMTzJ3g4lvFD4q2g8Q==</M><E>Aw==</E></RSAPK>
+<IDK>300</IDK>
+</DA>
+<FRMA algoritmo="SHA1withRSA">PFW+tVMbAhNEPF5hwpmh+0yNOxALBJiftjiOsJ20HxZDxVLVMGpG30Vu3POCt6mySJv7VI1Q5D0UJ7oRzWEl0g==</FRMA>
+</CAF>
+    <TSTED>2016-08-25T14:31:36</TSTED>
+  </DD>
+  <FRMT algoritmo="SHA1withRSA">HR92MBpgoNal4wX1bXYcQyKX9oNlL9wfsHGmRj9KMl9bUOXWr9hX7Z0dVxBTb88daoU0XfR8+b+WLxRBJajPjg==</FRMT>
+</TED>
+  <TmstFirma>2016-08-25T14:31:36</TmstFirma></Documento>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo xmlns="http://www.w3.org/2000/09/xmldsig#"><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/><Reference URI="#T33F145"><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/><DigestValue>ZPXiCWxTk1X6z9Xp9/g/OKYde0E=</DigestValue></Reference></SignedInfo><SignatureValue>Kd34wQbKzpH/mCjfUeNmSJ9bRoMy2qyrp4/phoAC5RGgy4bWcg4yycxtrYCCEQ4h
+ISN+sZMf0z2n/MmY2+fjzAErADArvfxYKfYnQTatazxWyeDrWB85kqe+BdHzUKqH
+cjpvOKyuIsXsfEUz/72EIm5ntasu3Hidnq11ZbvOdCniOvCcNx7m8O6dJl0Vg6MT
+z2HHN0B5ZSuXQ+wlmy7ySzacLBXlYPDm6no1tzV/weRvIianEzOhnbXrs++w1ysS
+xhayrqLRSl64d4t+z8zuI1EiCyt2Bbh2bQ5Md/GKPz+MOr4K+TBUYEpKR9fGAUh7
+g8RPG/FVkeMueXqgXYwJeA==</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>xcK5ilko6ML1WT2ttavc+dR3R9wiX4WevKWT76tY1bJtLsmunKRBqpQK9MIkVKVn
+we5C0MvNkVvcgtukwrdxvWgW+/ZCKt3IxZZLzhJaTp8HKHus4ZfMwLaF9YCl/iWQ
+fqacj2Lfn+Kp2kL83Fo0gwAZKEv0rijusL/nS4xvAAMBmcF4XT5beQI1lFg8/DTD
+jiwVBqgTaIzamTnU/33WmYcnSYpAzJSIjaasu7BPRBgjqFDePUpI3m98V8QfcNUk
+V3AN2wD+nLcrrH3r41f+IJ7QOys+aqURQ9ivEL59I4y9+uex7at0n/6Q9xGnegX6
+thw3/3VJlWFlmpHmxjBlmw==</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIF6zCCBNOgAwIBAgICShIwDQYJKoZIhvcNAQEFBQAwgaYxCzAJBgNVBAYTAkNM
+MRgwFgYDVQQKEw9BY2VwdGEuY29tIFMuQS4xSDBGBgNVBAMTP0FjZXB0YS5jb20g
+QXV0b3JpZGFkIENlcnRpZmljYWRvcmEgQ2xhc2UgMiBQZXJzb25hIE5hdHVyYWwg
+LSBHMzEeMBwGCSqGSIb3DQEJARYPaW5mb0BhY2VwdGEuY29tMRMwEQYDVQQFEwo5
+NjkxOTA1MC04MB4XDTE2MDYxMzIwNTE1OVoXDTE5MDYxMzIwNTE1OVowgZIxCzAJ
+BgNVBAYTAkNMMRgwFgYDVQQMEw9QRVJTT05BIE5BVFVSQUwxJjAkBgNVBAMTHUFM
+QkVSVE8gRU5SSVFVRSBHQVJSSURPIE5FSVJBMSwwKgYJKoZIhvcNAQkBFh1BR1JP
+UkVQVUVTVE9TX0FHTkBIT1RNQUlMLkNPTTETMBEGA1UEBRMKMTAxNTEzMjEtMTCC
+ASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAMXCuYpZKOjC9Vk9rbWr3PnU
+d0fcIl+Fnrylk++rWNWybS7JrpykQaqUCvTCJFSlZ8HuQtDLzZFb3ILbpMK3cb1o
+Fvv2QirdyMWWS84SWk6fByh7rOGXzMC2hfWApf4lkH6mnI9i35/iqdpC/NxaNIMA
+GShL9K4o7rC/50uMbwADAZnBeF0+W3kCNZRYPPw0w44sFQaoE2iM2pk51P991pmH
+J0mKQMyUiI2mrLuwT0QYI6hQ3j1KSN5vfFfEH3DVJFdwDdsA/py3K6x96+NX/iCe
+0DsrPmqlEUPYrxC+fSOMvfrnse2rdJ/+kPcRp3oF+rYcN/91SZVhZZqR5sYwZZsC
+AwEAAaOCAjMwggIvMB8GA1UdIwQYMBaAFEAkGj2pMXqFd3o9nnKTOYTlQDgZMB0G
+A1UdDgQWBBSQAZAnLz/h1Ut9QcGdQJTqJ0GXZjALBgNVHQ8EBAMCBPAwHQYDVR0l
+BBYwFAYIKwYBBQUHAwIGCCsGAQUFBwMEMBEGCWCGSAGG+EIBAQQEAwIFoDBuBgNV
+HSAEZzBlMGMGCisGAQQBtWuHagowVTAoBggrBgEFBQcCARYcaHR0cDovL3d3dy5h
+Y2VwdGEuY29tL0NQUy1HMzApBggrBgEFBQcCAjAdMBYWD0FjZXB0YS5jb20gUy5B
+LjADAgEJGgNUQkQwWgYDVR0SBFMwUaAYBggrBgEEAcEBAqAMFgo5NjkxOTA1MC04
+oCQGCCsGAQUFBwgDoBgwFgwKOTY5MTkwNTAtOAYIKwYBBAHBAQKBD2luZm9AYWNl
+cHRhLmNvbTBoBgNVHREEYTBfoBgGCCsGAQQBwQEBoAwWCjEwMTUxMzIxLTGgJAYI
+KwYBBQUHCAOgGDAWDAoxMDE1MTMyMS0xBggrBgEEAcEBAoEdQUdST1JFUFVFU1RP
+U19BR05ASE9UTUFJTC5DT00wPwYIKwYBBQUHAQEEMzAxMC8GCCsGAQUFBzABhiNo
+dHRwOi8vb2NzcC5hY2VwdGEuY29tL0NsYXNlM0Jpby1HMzA3BgNVHR8EMDAuMCyg
+KqAohiZodHRwOi8vY3JsLmFjZXB0YS5jb20vQ2xhc2UzQmlvLUczLmNybDANBgkq
+hkiG9w0BAQUFAAOCAQEAA1+wNLkbj6nBC8V8tjuayFGUCdMe8MRd8rtWswo5hMBN
+jKu6AWIX1A4Oi3IB0shj1RDbyfg6SNhSy5A7YyXROABjkq+KOzQNd4ruJmAGxBjE
+WibGuSTL6psul6RTbRg8Y9miG6+/eF5Gsz1gyyyZtyg48aRb6UsnSK0ruO1zZydt
+KVtfNIYWtHkvOFOywxm5u5LhxXFc7URFu9Z5tYiLiuWVZKmIm622EDWxvdAzeydA
+gGka4vo9iCU0pz/xkHxQHODg0LgJTVwZZ/tC59XquXSssZqOd8STHN/QhtVKDOUJ
+mRIfsCShj+zcrwwbQ/qolnofUSAA+Je+P/Esz+pAag==</X509Certificate></X509Data></KeyInfo></Signature></DTE>
+  </SetDTE>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo xmlns="http://www.w3.org/2000/09/xmldsig#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/><Reference URI="#SetDoc"><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/><DigestValue>J+1qhZMbKGHMpZyd9mXlEI7o1gc=</DigestValue></Reference></SignedInfo><SignatureValue>gId5sQbGVZtwCF74uzFjaz/eETiT9fHjBLCuo1uGFF4SNNUkm91/Fns99YWfqsZp
+U7uO6Pyb46kWTN+7u3bzLMD7eG/nBxQ9sZXY24td8/tHO8aWW6MN6XcUPaI2/Sex
+R8Ad3VYpQydCJF5W3FR/ypUuRcTgNshdBFaQjuzFFUdgqoe8y7cjjE8Wi7kNOYgQ
+0A+M8R4/Yb4jo6EGH7DuDxadQR5rzC8hhEpmFFfZKxTcar2vEFqyaPkDn/6tbY7R
+sdzBkTRUDIr9uXd0SKwYu0NE4tU2hQI14Txv+VEpjkF6/vBLoSwQyVs1E90gPXCy
+6qeCOTyTMuedd0uP7A7wBg==</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>xcK5ilko6ML1WT2ttavc+dR3R9wiX4WevKWT76tY1bJtLsmunKRBqpQK9MIkVKVn
+we5C0MvNkVvcgtukwrdxvWgW+/ZCKt3IxZZLzhJaTp8HKHus4ZfMwLaF9YCl/iWQ
+fqacj2Lfn+Kp2kL83Fo0gwAZKEv0rijusL/nS4xvAAMBmcF4XT5beQI1lFg8/DTD
+jiwVBqgTaIzamTnU/33WmYcnSYpAzJSIjaasu7BPRBgjqFDePUpI3m98V8QfcNUk
+V3AN2wD+nLcrrH3r41f+IJ7QOys+aqURQ9ivEL59I4y9+uex7at0n/6Q9xGnegX6
+thw3/3VJlWFlmpHmxjBlmw==</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIF6zCCBNOgAwIBAgICShIwDQYJKoZIhvcNAQEFBQAwgaYxCzAJBgNVBAYTAkNM
+MRgwFgYDVQQKEw9BY2VwdGEuY29tIFMuQS4xSDBGBgNVBAMTP0FjZXB0YS5jb20g
+QXV0b3JpZGFkIENlcnRpZmljYWRvcmEgQ2xhc2UgMiBQZXJzb25hIE5hdHVyYWwg
+LSBHMzEeMBwGCSqGSIb3DQEJARYPaW5mb0BhY2VwdGEuY29tMRMwEQYDVQQFEwo5
+NjkxOTA1MC04MB4XDTE2MDYxMzIwNTE1OVoXDTE5MDYxMzIwNTE1OVowgZIxCzAJ
+BgNVBAYTAkNMMRgwFgYDVQQMEw9QRVJTT05BIE5BVFVSQUwxJjAkBgNVBAMTHUFM
+QkVSVE8gRU5SSVFVRSBHQVJSSURPIE5FSVJBMSwwKgYJKoZIhvcNAQkBFh1BR1JP
+UkVQVUVTVE9TX0FHTkBIT1RNQUlMLkNPTTETMBEGA1UEBRMKMTAxNTEzMjEtMTCC
+ASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAMXCuYpZKOjC9Vk9rbWr3PnU
+d0fcIl+Fnrylk++rWNWybS7JrpykQaqUCvTCJFSlZ8HuQtDLzZFb3ILbpMK3cb1o
+Fvv2QirdyMWWS84SWk6fByh7rOGXzMC2hfWApf4lkH6mnI9i35/iqdpC/NxaNIMA
+GShL9K4o7rC/50uMbwADAZnBeF0+W3kCNZRYPPw0w44sFQaoE2iM2pk51P991pmH
+J0mKQMyUiI2mrLuwT0QYI6hQ3j1KSN5vfFfEH3DVJFdwDdsA/py3K6x96+NX/iCe
+0DsrPmqlEUPYrxC+fSOMvfrnse2rdJ/+kPcRp3oF+rYcN/91SZVhZZqR5sYwZZsC
+AwEAAaOCAjMwggIvMB8GA1UdIwQYMBaAFEAkGj2pMXqFd3o9nnKTOYTlQDgZMB0G
+A1UdDgQWBBSQAZAnLz/h1Ut9QcGdQJTqJ0GXZjALBgNVHQ8EBAMCBPAwHQYDVR0l
+BBYwFAYIKwYBBQUHAwIGCCsGAQUFBwMEMBEGCWCGSAGG+EIBAQQEAwIFoDBuBgNV
+HSAEZzBlMGMGCisGAQQBtWuHagowVTAoBggrBgEFBQcCARYcaHR0cDovL3d3dy5h
+Y2VwdGEuY29tL0NQUy1HMzApBggrBgEFBQcCAjAdMBYWD0FjZXB0YS5jb20gUy5B
+LjADAgEJGgNUQkQwWgYDVR0SBFMwUaAYBggrBgEEAcEBAqAMFgo5NjkxOTA1MC04
+oCQGCCsGAQUFBwgDoBgwFgwKOTY5MTkwNTAtOAYIKwYBBAHBAQKBD2luZm9AYWNl
+cHRhLmNvbTBoBgNVHREEYTBfoBgGCCsGAQQBwQEBoAwWCjEwMTUxMzIxLTGgJAYI
+KwYBBQUHCAOgGDAWDAoxMDE1MTMyMS0xBggrBgEEAcEBAoEdQUdST1JFUFVFU1RP
+U19BR05ASE9UTUFJTC5DT00wPwYIKwYBBQUHAQEEMzAxMC8GCCsGAQUFBzABhiNo
+dHRwOi8vb2NzcC5hY2VwdGEuY29tL0NsYXNlM0Jpby1HMzA3BgNVHR8EMDAuMCyg
+KqAohiZodHRwOi8vY3JsLmFjZXB0YS5jb20vQ2xhc2UzQmlvLUczLmNybDANBgkq
+hkiG9w0BAQUFAAOCAQEAA1+wNLkbj6nBC8V8tjuayFGUCdMe8MRd8rtWswo5hMBN
+jKu6AWIX1A4Oi3IB0shj1RDbyfg6SNhSy5A7YyXROABjkq+KOzQNd4ruJmAGxBjE
+WibGuSTL6psul6RTbRg8Y9miG6+/eF5Gsz1gyyyZtyg48aRb6UsnSK0ruO1zZydt
+KVtfNIYWtHkvOFOywxm5u5LhxXFc7URFu9Z5tYiLiuWVZKmIm622EDWxvdAzeydA
+gGka4vo9iCU0pz/xkHxQHODg0LgJTVwZZ/tC59XquXSssZqOd8STHN/QhtVKDOUJ
+mRIfsCShj+zcrwwbQ/qolnofUSAA+Je+P/Esz+pAag==</X509Certificate></X509Data></KeyInfo></Signature></EnvioDTE>

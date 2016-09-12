@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<EnvioDTE xmlns="http://www.sii.cl/SiiDte" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sii.cl/SiiDte EnvioDTE_v10.xsd" version="1.0">
+  <SetDTE ID="SetDoc">
+    <Caratula version="1.0">
+      <RutEmisor>10151321-1</RutEmisor>
+      <RutEnvia>10151321-1</RutEnvia>
+      <RutReceptor>60803000-K</RutReceptor>
+      <FchResol>2014-08-22</FchResol>
+      <NroResol>80</NroResol>
+      <TmstFirmaEnv>2016-09-08T02:42:27</TmstFirmaEnv>
+      <SubTotDTE>
+        <TpoDTE>33</TpoDTE>
+        <NroDTE>1</NroDTE>
+      </SubTotDTE>
+    </Caratula>
+    <DTE version="1.0">
+  <Documento ID="T33F251">
+    <Encabezado>
+      <IdDoc>
+        <TipoDTE>33</TipoDTE>
+        <Folio>251</Folio>
+        <FchEmis>2016-09-08</FchEmis>
+      </IdDoc>
+      <Emisor>
+        <RUTEmisor>10151321-1</RUTEmisor>
+        <RznSoc>ALBERTO ENRIQUE GARRIDO NEIRA</RznSoc>
+        <GiroEmis>Venta al por mayor de maquinaria</GiroEmis>
+        <Acteco>515009</Acteco>
+        <DirOrigen>15 ORIENTE 2 SUR No.2201</DirOrigen>
+        <CmnaOrigen>TALCA</CmnaOrigen>
+      </Emisor>
+      <Receptor>
+        <RUTRecep>76462239-1</RUTRecep>
+        <RznSocRecep>SOCIEDAD AGRICOLA DONA FRANCISCA LIMITADA</RznSocRecep>
+        <GiroRecep>PRODUCCION DE SEMILLAS DE CEREALES, LEGU</GiroRecep>
+        <DirRecep>PARCELA 41 EL PRADO </DirRecep>
+        <CmnaRecep>SAN CLEMENTE</CmnaRecep>
+      </Receptor>
+      <Totales>
+        <MntNeto>357035</MntNeto>
+        <TasaIVA>19</TasaIVA>
+        <IVA>67837</IVA>
+        <MntTotal>424872</MntTotal>
+      </Totales>
+    </Encabezado>
+    <Detalle>
+      <NroLinDet>1</NroLinDet>
+      <NmbItem>FILTRO AIRE INTERIOR AL1502881</NmbItem>
+      <QtyItem>1.00</QtyItem>
+      <PrcItem>25892</PrcItem>
+      <MontoItem>25892</MontoItem>
+    </Detalle>
+    <Detalle>
+      <NroLinDet>2</NroLinDet>
+      <NmbItem>FILTRO HIDRAULICO SJ117921</NmbItem>
+      <QtyItem>1.00</QtyItem>
+      <PrcItem>83929</PrcItem>
+      <MontoItem>83929</MontoItem>
+    </Detalle>
+    <Detalle>
+      <NroLinDet>3</NroLinDet>
+      <NmbItem>FILTRO AIRE EXTERIOR AL1727801</NmbItem>
+      <QtyItem>1.00</QtyItem>
+      <PrcItem>49727</PrcItem>
+      <MontoItem>49727</MontoItem>
+    </Detalle>
+    <Detalle>
+      <NroLinDet>4</NroLinDet>
+      <NmbItem>FILTRO ACEITE MOTOR RE5048361</NmbItem>
+      <QtyItem>1.00</QtyItem>
+      <PrcItem>13397</PrcItem>
+      <MontoItem>13397</MontoItem>
+    </Detalle>
+    <Detalle>
+      <NroLinDet>5</NroLinDet>
+      <NmbItem>FILTRO PETROLEO LARGO RE624191</NmbItem>
+      <QtyItem>1.00</QtyItem>
+      <PrcItem>14908</PrcItem>
+      <MontoItem>14908</MontoItem>
+    </Detalle>
+    <Detalle>
+      <NroLinDet>6</NroLinDet>
+      <NmbItem>FILTRO COMBUSTIBLE SEPARADOR/AGUA RE624241 </NmbItem>
+      <QtyItem>1.00</QtyItem>
+      <PrcItem>14699</PrcItem>
+      <MontoItem>14699</MontoItem>
+    </Detalle>
+    <Detalle>
+      <NroLinDet>7</NroLinDet>
+      <NmbItem>FILTRO HIDRAULICO RE1721781</NmbItem>
+      <QtyItem>1.00</QtyItem>
+      <PrcItem>79825</PrcItem>
+      <MontoItem>79825</MontoItem>
+    </Detalle>
+    <Detalle>
+      <NroLinDet>8</NroLinDet>
+      <NmbItem>FILTRO AIRE EXTERIOR AT1718531</NmbItem>
+      <QtyItem>1.00</QtyItem>
+      <PrcItem>13071</PrcItem>
+      <MontoItem>13071</MontoItem>
+    </Detalle>
+    <Detalle>
+      <NroLinDet>9</NroLinDet>
+      <NmbItem>FILTRO AIRE INTERIOR AT1718541</NmbItem>
+      <QtyItem>1.00</QtyItem>
+      <PrcItem>6998</PrcItem>
+      <MontoItem>6998</MontoItem>
+    </Detalle>
+    <Detalle>
+      <NroLinDet>10</NroLinDet>
+      <NmbItem>FILTRO DE PETROLEO MF 5460</NmbItem>
+      <QtyItem>1.00</QtyItem>
+      <PrcItem>22412</PrcItem>
+      <MontoItem>22412</MontoItem>
+    </Detalle>
+    <Detalle>
+      <NroLinDet>11</NroLinDet>
+      <NmbItem>FILTRO DE PETROLEO MF5480 MF 6485 SISU</NmbItem>
+      <QtyItem>1.00</QtyItem>
+      <PrcItem>25575</PrcItem>
+      <MontoItem>25575</MontoItem>
+    </Detalle>
+    <Detalle>
+      <NroLinDet>12</NroLinDet>
+      <NmbItem>FILTRO DE ACEITE MOTOR MF 5460 </NmbItem>
+      <QtyItem>1.00</QtyItem>
+      <PrcItem>6602</PrcItem>
+      <MontoItem>6602</MontoItem>
+    </Detalle>
+    <TED version="1.0">
+  <DD>
+    <RE>10151321-1</RE>
+    <TD>33</TD>
+    <F>251</F>
+    <FE>2016-09-08</FE>
+    <RR>76462239-1</RR>
+    <RSR>SOCIEDAD AGRICOLA DONA FRANCISCA LIMITAD</RSR>
+    <MNT>424872</MNT>
+    <IT1>FILTRO AIRE INTERIOR AL1502881</IT1>
+    <CAF version="1.0">
+<DA>
+<RE>10151321-1</RE>
+<RS>ALBERTO ENRIQUE GARRIDO NEIRA</RS>
+<TD>33</TD>
+<RNG><D>194</D><H>260</H></RNG>
+<FA>2016-08-31</FA>
+<RSAPK><M>wZeqVE62n1SyPIP9Cv9ZPyyPRQwljkQrzCRqgL7Hxkz+R0W/3CA1nBdrEylA3ju19AUgQpDF8rH/7hEnSYAIyQ==</M><E>Aw==</E></RSAPK>
+<IDK>300</IDK>
+</DA>
+<FRMA algoritmo="SHA1withRSA">DOpjfTgP1WMLHIalmmvsuJEzBbzfKrGZnxNTyeZzfU1rRuZg5IjNdaONsHePE4bnfj+SJe28Wh73riD9iLg/ag==</FRMA>
+</CAF>
+    <TSTED>2016-09-08T02:42:27</TSTED>
+  </DD>
+  <FRMT algoritmo="SHA1withRSA">RTUYiefAcytlEszBbd/TFdClm3E1z/DQQn6ENKYFtV/2dLj1urnOz7ETNNc0rhbs5CARL/SqO1cp0LeqN1JKKA==</FRMT>
+</TED>
+  <TmstFirma>2016-09-08T02:42:27</TmstFirma></Documento>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo xmlns="http://www.w3.org/2000/09/xmldsig#"><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/><Reference URI="#T33F251"><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/><DigestValue>jKDm2aF3aqW7y6JiMCw5gryQUik=</DigestValue></Reference></SignedInfo><SignatureValue>SICVwfN0GOemZxltktyfQ07V1yJVZ1Six2xc6OHqC2dJVKrVkyZokCUhODtTDdkT
+f56uSzuRsc8FWfoM5uIunVz/nRwNd/zij631nvLtSXr+wond5MMz2uOISJAACKLi
+gEpRslbOQ3dSEvDZhUNeVhUgReP9I/V6T8ajD0WiZ1K/UV+vsQO/6KTwmvEthL65
+46sUs/JfwZzfsg2N/jp6N19qdgYsKXQ+M9K4MKk4FZtlS8FcsZxZwNwM+MPdjHYi
+OsM482YobQbqsOltU8X/Wr2CpP06cvoYrQ0jStS7SZ+D2F0AgW0vUupyjOB6MnZT
+4Z6uOFUlTwqMq9HXeaYDYw==</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>xcK5ilko6ML1WT2ttavc+dR3R9wiX4WevKWT76tY1bJtLsmunKRBqpQK9MIkVKVn
+we5C0MvNkVvcgtukwrdxvWgW+/ZCKt3IxZZLzhJaTp8HKHus4ZfMwLaF9YCl/iWQ
+fqacj2Lfn+Kp2kL83Fo0gwAZKEv0rijusL/nS4xvAAMBmcF4XT5beQI1lFg8/DTD
+jiwVBqgTaIzamTnU/33WmYcnSYpAzJSIjaasu7BPRBgjqFDePUpI3m98V8QfcNUk
+V3AN2wD+nLcrrH3r41f+IJ7QOys+aqURQ9ivEL59I4y9+uex7at0n/6Q9xGnegX6
+thw3/3VJlWFlmpHmxjBlmw==</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIF6zCCBNOgAwIBAgICShIwDQYJKoZIhvcNAQEFBQAwgaYxCzAJBgNVBAYTAkNM
+MRgwFgYDVQQKEw9BY2VwdGEuY29tIFMuQS4xSDBGBgNVBAMTP0FjZXB0YS5jb20g
+QXV0b3JpZGFkIENlcnRpZmljYWRvcmEgQ2xhc2UgMiBQZXJzb25hIE5hdHVyYWwg
+LSBHMzEeMBwGCSqGSIb3DQEJARYPaW5mb0BhY2VwdGEuY29tMRMwEQYDVQQFEwo5
+NjkxOTA1MC04MB4XDTE2MDYxMzIwNTE1OVoXDTE5MDYxMzIwNTE1OVowgZIxCzAJ
+BgNVBAYTAkNMMRgwFgYDVQQMEw9QRVJTT05BIE5BVFVSQUwxJjAkBgNVBAMTHUFM
+QkVSVE8gRU5SSVFVRSBHQVJSSURPIE5FSVJBMSwwKgYJKoZIhvcNAQkBFh1BR1JP
+UkVQVUVTVE9TX0FHTkBIT1RNQUlMLkNPTTETMBEGA1UEBRMKMTAxNTEzMjEtMTCC
+ASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAMXCuYpZKOjC9Vk9rbWr3PnU
+d0fcIl+Fnrylk++rWNWybS7JrpykQaqUCvTCJFSlZ8HuQtDLzZFb3ILbpMK3cb1o
+Fvv2QirdyMWWS84SWk6fByh7rOGXzMC2hfWApf4lkH6mnI9i35/iqdpC/NxaNIMA
+GShL9K4o7rC/50uMbwADAZnBeF0+W3kCNZRYPPw0w44sFQaoE2iM2pk51P991pmH
+J0mKQMyUiI2mrLuwT0QYI6hQ3j1KSN5vfFfEH3DVJFdwDdsA/py3K6x96+NX/iCe
+0DsrPmqlEUPYrxC+fSOMvfrnse2rdJ/+kPcRp3oF+rYcN/91SZVhZZqR5sYwZZsC
+AwEAAaOCAjMwggIvMB8GA1UdIwQYMBaAFEAkGj2pMXqFd3o9nnKTOYTlQDgZMB0G
+A1UdDgQWBBSQAZAnLz/h1Ut9QcGdQJTqJ0GXZjALBgNVHQ8EBAMCBPAwHQYDVR0l
+BBYwFAYIKwYBBQUHAwIGCCsGAQUFBwMEMBEGCWCGSAGG+EIBAQQEAwIFoDBuBgNV
+HSAEZzBlMGMGCisGAQQBtWuHagowVTAoBggrBgEFBQcCARYcaHR0cDovL3d3dy5h
+Y2VwdGEuY29tL0NQUy1HMzApBggrBgEFBQcCAjAdMBYWD0FjZXB0YS5jb20gUy5B
+LjADAgEJGgNUQkQwWgYDVR0SBFMwUaAYBggrBgEEAcEBAqAMFgo5NjkxOTA1MC04
+oCQGCCsGAQUFBwgDoBgwFgwKOTY5MTkwNTAtOAYIKwYBBAHBAQKBD2luZm9AYWNl
+cHRhLmNvbTBoBgNVHREEYTBfoBgGCCsGAQQBwQEBoAwWCjEwMTUxMzIxLTGgJAYI
+KwYBBQUHCAOgGDAWDAoxMDE1MTMyMS0xBggrBgEEAcEBAoEdQUdST1JFUFVFU1RP
+U19BR05ASE9UTUFJTC5DT00wPwYIKwYBBQUHAQEEMzAxMC8GCCsGAQUFBzABhiNo
+dHRwOi8vb2NzcC5hY2VwdGEuY29tL0NsYXNlM0Jpby1HMzA3BgNVHR8EMDAuMCyg
+KqAohiZodHRwOi8vY3JsLmFjZXB0YS5jb20vQ2xhc2UzQmlvLUczLmNybDANBgkq
+hkiG9w0BAQUFAAOCAQEAA1+wNLkbj6nBC8V8tjuayFGUCdMe8MRd8rtWswo5hMBN
+jKu6AWIX1A4Oi3IB0shj1RDbyfg6SNhSy5A7YyXROABjkq+KOzQNd4ruJmAGxBjE
+WibGuSTL6psul6RTbRg8Y9miG6+/eF5Gsz1gyyyZtyg48aRb6UsnSK0ruO1zZydt
+KVtfNIYWtHkvOFOywxm5u5LhxXFc7URFu9Z5tYiLiuWVZKmIm622EDWxvdAzeydA
+gGka4vo9iCU0pz/xkHxQHODg0LgJTVwZZ/tC59XquXSssZqOd8STHN/QhtVKDOUJ
+mRIfsCShj+zcrwwbQ/qolnofUSAA+Je+P/Esz+pAag==</X509Certificate></X509Data></KeyInfo></Signature></DTE>
+  </SetDTE>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo xmlns="http://www.w3.org/2000/09/xmldsig#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/><Reference URI="#SetDoc"><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/><DigestValue>vYw5cfMmkv5r4Vxmt5EKbzSh4d4=</DigestValue></Reference></SignedInfo><SignatureValue>CEKp7DzJRHYZW6P5DzZvO0qvX7Ts8oAE5Fy0W8vEqgUfcobx7W//mZPizxbvaOjK
+K1KIY71YsfA96es0kH+IqAdnSTOWVytzUJfEdFigVWRN8XiRbvfzDkrZQ8FgpyjQ
+He5ywm9tmHI4dTrHp6AGJ30MKFKW5mJoticEQe9vTeTHwCgVe0Fz4i6tBG2CpYbB
+HniA9dSYmNjGDikH7Q6cJu9LHcV6EsVzBeEf/6z3H74wPQ4fN9ZO/L2OftAfxyQl
+Qu24BcaiAEVMMAFzgg61DJkjHOmh2uSGB82TwCULTGwYPZEqTXssFHAVI2KG/1QC
+0EHn35Eh6MRcPjMm6Yon4w==</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>xcK5ilko6ML1WT2ttavc+dR3R9wiX4WevKWT76tY1bJtLsmunKRBqpQK9MIkVKVn
+we5C0MvNkVvcgtukwrdxvWgW+/ZCKt3IxZZLzhJaTp8HKHus4ZfMwLaF9YCl/iWQ
+fqacj2Lfn+Kp2kL83Fo0gwAZKEv0rijusL/nS4xvAAMBmcF4XT5beQI1lFg8/DTD
+jiwVBqgTaIzamTnU/33WmYcnSYpAzJSIjaasu7BPRBgjqFDePUpI3m98V8QfcNUk
+V3AN2wD+nLcrrH3r41f+IJ7QOys+aqURQ9ivEL59I4y9+uex7at0n/6Q9xGnegX6
+thw3/3VJlWFlmpHmxjBlmw==</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIF6zCCBNOgAwIBAgICShIwDQYJKoZIhvcNAQEFBQAwgaYxCzAJBgNVBAYTAkNM
+MRgwFgYDVQQKEw9BY2VwdGEuY29tIFMuQS4xSDBGBgNVBAMTP0FjZXB0YS5jb20g
+QXV0b3JpZGFkIENlcnRpZmljYWRvcmEgQ2xhc2UgMiBQZXJzb25hIE5hdHVyYWwg
+LSBHMzEeMBwGCSqGSIb3DQEJARYPaW5mb0BhY2VwdGEuY29tMRMwEQYDVQQFEwo5
+NjkxOTA1MC04MB4XDTE2MDYxMzIwNTE1OVoXDTE5MDYxMzIwNTE1OVowgZIxCzAJ
+BgNVBAYTAkNMMRgwFgYDVQQMEw9QRVJTT05BIE5BVFVSQUwxJjAkBgNVBAMTHUFM
+QkVSVE8gRU5SSVFVRSBHQVJSSURPIE5FSVJBMSwwKgYJKoZIhvcNAQkBFh1BR1JP
+UkVQVUVTVE9TX0FHTkBIT1RNQUlMLkNPTTETMBEGA1UEBRMKMTAxNTEzMjEtMTCC
+ASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAMXCuYpZKOjC9Vk9rbWr3PnU
+d0fcIl+Fnrylk++rWNWybS7JrpykQaqUCvTCJFSlZ8HuQtDLzZFb3ILbpMK3cb1o
+Fvv2QirdyMWWS84SWk6fByh7rOGXzMC2hfWApf4lkH6mnI9i35/iqdpC/NxaNIMA
+GShL9K4o7rC/50uMbwADAZnBeF0+W3kCNZRYPPw0w44sFQaoE2iM2pk51P991pmH
+J0mKQMyUiI2mrLuwT0QYI6hQ3j1KSN5vfFfEH3DVJFdwDdsA/py3K6x96+NX/iCe
+0DsrPmqlEUPYrxC+fSOMvfrnse2rdJ/+kPcRp3oF+rYcN/91SZVhZZqR5sYwZZsC
+AwEAAaOCAjMwggIvMB8GA1UdIwQYMBaAFEAkGj2pMXqFd3o9nnKTOYTlQDgZMB0G
+A1UdDgQWBBSQAZAnLz/h1Ut9QcGdQJTqJ0GXZjALBgNVHQ8EBAMCBPAwHQYDVR0l
+BBYwFAYIKwYBBQUHAwIGCCsGAQUFBwMEMBEGCWCGSAGG+EIBAQQEAwIFoDBuBgNV
+HSAEZzBlMGMGCisGAQQBtWuHagowVTAoBggrBgEFBQcCARYcaHR0cDovL3d3dy5h
+Y2VwdGEuY29tL0NQUy1HMzApBggrBgEFBQcCAjAdMBYWD0FjZXB0YS5jb20gUy5B
+LjADAgEJGgNUQkQwWgYDVR0SBFMwUaAYBggrBgEEAcEBAqAMFgo5NjkxOTA1MC04
+oCQGCCsGAQUFBwgDoBgwFgwKOTY5MTkwNTAtOAYIKwYBBAHBAQKBD2luZm9AYWNl
+cHRhLmNvbTBoBgNVHREEYTBfoBgGCCsGAQQBwQEBoAwWCjEwMTUxMzIxLTGgJAYI
+KwYBBQUHCAOgGDAWDAoxMDE1MTMyMS0xBggrBgEEAcEBAoEdQUdST1JFUFVFU1RP
+U19BR05ASE9UTUFJTC5DT00wPwYIKwYBBQUHAQEEMzAxMC8GCCsGAQUFBzABhiNo
+dHRwOi8vb2NzcC5hY2VwdGEuY29tL0NsYXNlM0Jpby1HMzA3BgNVHR8EMDAuMCyg
+KqAohiZodHRwOi8vY3JsLmFjZXB0YS5jb20vQ2xhc2UzQmlvLUczLmNybDANBgkq
+hkiG9w0BAQUFAAOCAQEAA1+wNLkbj6nBC8V8tjuayFGUCdMe8MRd8rtWswo5hMBN
+jKu6AWIX1A4Oi3IB0shj1RDbyfg6SNhSy5A7YyXROABjkq+KOzQNd4ruJmAGxBjE
+WibGuSTL6psul6RTbRg8Y9miG6+/eF5Gsz1gyyyZtyg48aRb6UsnSK0ruO1zZydt
+KVtfNIYWtHkvOFOywxm5u5LhxXFc7URFu9Z5tYiLiuWVZKmIm622EDWxvdAzeydA
+gGka4vo9iCU0pz/xkHxQHODg0LgJTVwZZ/tC59XquXSssZqOd8STHN/QhtVKDOUJ
+mRIfsCShj+zcrwwbQ/qolnofUSAA+Je+P/Esz+pAag==</X509Certificate></X509Data></KeyInfo></Signature></EnvioDTE>

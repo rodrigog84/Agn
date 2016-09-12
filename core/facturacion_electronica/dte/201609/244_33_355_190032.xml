@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<EnvioDTE xmlns="http://www.sii.cl/SiiDte" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sii.cl/SiiDte EnvioDTE_v10.xsd" version="1.0">
+  <SetDTE ID="SetDoc">
+    <Caratula version="1.0">
+      <RutEmisor>10151321-1</RutEmisor>
+      <RutEnvia>10151321-1</RutEnvia>
+      <RutReceptor>60803000-K</RutReceptor>
+      <FchResol>2014-08-22</FchResol>
+      <NroResol>80</NroResol>
+      <TmstFirmaEnv>2016-09-07T19:00:32</TmstFirmaEnv>
+      <SubTotDTE>
+        <TpoDTE>33</TpoDTE>
+        <NroDTE>1</NroDTE>
+      </SubTotDTE>
+    </Caratula>
+    <DTE version="1.0">
+  <Documento ID="T33F244">
+    <Encabezado>
+      <IdDoc>
+        <TipoDTE>33</TipoDTE>
+        <Folio>244</Folio>
+        <FchEmis>2016-09-07</FchEmis>
+      </IdDoc>
+      <Emisor>
+        <RUTEmisor>10151321-1</RUTEmisor>
+        <RznSoc>ALBERTO ENRIQUE GARRIDO NEIRA</RznSoc>
+        <GiroEmis>Venta al por mayor de maquinaria</GiroEmis>
+        <Acteco>515009</Acteco>
+        <DirOrigen>15 ORIENTE 2 SUR No.2201</DirOrigen>
+        <CmnaOrigen>TALCA</CmnaOrigen>
+      </Emisor>
+      <Receptor>
+        <RUTRecep>76462239-1</RUTRecep>
+        <RznSocRecep>SOCIEDAD AGRICOLA DONA FRANCISCA LIMITADA</RznSocRecep>
+        <GiroRecep>PRODUCCION DE SEMILLAS DE CEREALES, LEGU</GiroRecep>
+        <DirRecep>PARCELA 41 EL PRADO </DirRecep>
+        <CmnaRecep>SAN CLEMENTE</CmnaRecep>
+      </Receptor>
+      <Totales>
+        <MntNeto>120221</MntNeto>
+        <TasaIVA>19</TasaIVA>
+        <IVA>22842</IVA>
+        <MntTotal>143063</MntTotal>
+      </Totales>
+    </Encabezado>
+    <Detalle>
+      <NroLinDet>1</NroLinDet>
+      <NmbItem>PERNO HEX CORRIENTE GRADO 5 NEGRO 1/2 X 20 X 2</NmbItem>
+      <QtyItem>6.00</QtyItem>
+      <PrcItem>453</PrcItem>
+      <MontoItem>2723</MontoItem>
+    </Detalle>
+    <Detalle>
+      <NroLinDet>2</NroLinDet>
+      <NmbItem>AMARRA PLASTICA </NmbItem>
+      <QtyItem>12.00</QtyItem>
+      <PrcItem>159</PrcItem>
+      <MontoItem>1916</MontoItem>
+    </Detalle>
+    <Detalle>
+      <NroLinDet>3</NroLinDet>
+      <NmbItem>ROST OFF WURTH</NmbItem>
+      <QtyItem>1.00</QtyItem>
+      <PrcItem>3529</PrcItem>
+      <MontoItem>3529</MontoItem>
+    </Detalle>
+    <Detalle>
+      <NroLinDet>4</NroLinDet>
+      <NmbItem>PERNO DE ARADO 3 GRADO 5 CINCADO 1/2 X 12 X 3</NmbItem>
+      <QtyItem>19.00</QtyItem>
+      <PrcItem>823</PrcItem>
+      <MontoItem>15647</MontoItem>
+    </Detalle>
+    <Detalle>
+      <NroLinDet>5</NroLinDet>
+      <NmbItem>PERNO DE ARADO 3 GRADO 5 CINCADO 1/2 X 12 X 3.1/2</NmbItem>
+      <QtyItem>13.00</QtyItem>
+      <PrcItem>1134</PrcItem>
+      <MontoItem>14748</MontoItem>
+    </Detalle>
+    <Detalle>
+      <NroLinDet>6</NroLinDet>
+      <NmbItem>PERNO DE ARADO 3 GRADO 5 CINCADO 1/2 X 12 X 2.1/2</NmbItem>
+      <QtyItem>5.00</QtyItem>
+      <PrcItem>579</PrcItem>
+      <MontoItem>2899</MontoItem>
+    </Detalle>
+    <Detalle>
+      <NroLinDet>7</NroLinDet>
+      <NmbItem>PERNO HEX CORRIENTE GRADO 5 NEGRO 3/4 X 16 X 2</NmbItem>
+      <QtyItem>10.00</QtyItem>
+      <PrcItem>1050</PrcItem>
+      <MontoItem>10504</MontoItem>
+    </Detalle>
+    <Detalle>
+      <NroLinDet>8</NroLinDet>
+      <NmbItem>AMPOLLETA GLOBO</NmbItem>
+      <QtyItem>4.00</QtyItem>
+      <PrcItem>327</PrcItem>
+      <MontoItem>1311</MontoItem>
+    </Detalle>
+    <Detalle>
+      <NroLinDet>9</NroLinDet>
+      <NmbItem>OSRAM AMPOLLETA 24 V H4 P43</NmbItem>
+      <QtyItem>2.00</QtyItem>
+      <PrcItem>2437</PrcItem>
+      <MontoItem>4874</MontoItem>
+    </Detalle>
+    <Detalle>
+      <NroLinDet>10</NroLinDet>
+      <NmbItem>FUSIBLE CUÑO PATA  GRANDE</NmbItem>
+      <QtyItem>23.00</QtyItem>
+      <PrcItem>71</PrcItem>
+      <MontoItem>1643</MontoItem>
+    </Detalle>
+    <Detalle>
+      <NroLinDet>11</NroLinDet>
+      <NmbItem>HUINCHA AISLADORA TRUPER 19MMX18M NEGRA # M-33</NmbItem>
+      <QtyItem>1.00</QtyItem>
+      <PrcItem>756</PrcItem>
+      <MontoItem>756</MontoItem>
+    </Detalle>
+    <Detalle>
+      <NroLinDet>12</NroLinDet>
+      <NmbItem>LIMPIADOR DE CONTACTOS 3 EN UNO PROF. 300 ML.</NmbItem>
+      <QtyItem>1.00</QtyItem>
+      <PrcItem>5798</PrcItem>
+      <MontoItem>5798</MontoItem>
+    </Detalle>
+    <Detalle>
+      <NroLinDet>13</NroLinDet>
+      <NmbItem>W 940/1 FILTRO ACEITE</NmbItem>
+      <QtyItem>1.00</QtyItem>
+      <PrcItem>3613</PrcItem>
+      <MontoItem>3613</MontoItem>
+    </Detalle>
+    <Detalle>
+      <NroLinDet>14</NroLinDet>
+      <NmbItem>P 945x FILTRO COMBUSTIBLE</NmbItem>
+      <QtyItem>1.00</QtyItem>
+      <PrcItem>4538</PrcItem>
+      <MontoItem>4538</MontoItem>
+    </Detalle>
+    <Detalle>
+      <NroLinDet>15</NroLinDet>
+      <NmbItem>CABLE ELECTRICO FORRADO 3 COLORES.</NmbItem>
+      <QtyItem>2.50</QtyItem>
+      <PrcItem>2352</PrcItem>
+      <MontoItem>5882</MontoItem>
+    </Detalle>
+    <Detalle>
+      <NroLinDet>16</NroLinDet>
+      <NmbItem>FILTRO COMBUSTIBLE RE5228681</NmbItem>
+      <QtyItem>1.00</QtyItem>
+      <PrcItem>15227</PrcItem>
+      <MontoItem>15227</MontoItem>
+    </Detalle>
+    <Detalle>
+      <NroLinDet>17</NroLinDet>
+      <NmbItem>ELEMENTO FILTRO COMBUSTIBLE RE5419221</NmbItem>
+      <QtyItem>1.00</QtyItem>
+      <PrcItem>24613</PrcItem>
+      <MontoItem>24613</MontoItem>
+    </Detalle>
+    <TED version="1.0">
+  <DD>
+    <RE>10151321-1</RE>
+    <TD>33</TD>
+    <F>244</F>
+    <FE>2016-09-07</FE>
+    <RR>76462239-1</RR>
+    <RSR>SOCIEDAD AGRICOLA DONA FRANCISCA LIMITAD</RSR>
+    <MNT>143063</MNT>
+    <IT1>PERNO HEX CORRIENTE GRADO 5 NEGRO 1/2 X</IT1>
+    <CAF version="1.0">
+<DA>
+<RE>10151321-1</RE>
+<RS>ALBERTO ENRIQUE GARRIDO NEIRA</RS>
+<TD>33</TD>
+<RNG><D>194</D><H>260</H></RNG>
+<FA>2016-08-31</FA>
+<RSAPK><M>wZeqVE62n1SyPIP9Cv9ZPyyPRQwljkQrzCRqgL7Hxkz+R0W/3CA1nBdrEylA3ju19AUgQpDF8rH/7hEnSYAIyQ==</M><E>Aw==</E></RSAPK>
+<IDK>300</IDK>
+</DA>
+<FRMA algoritmo="SHA1withRSA">DOpjfTgP1WMLHIalmmvsuJEzBbzfKrGZnxNTyeZzfU1rRuZg5IjNdaONsHePE4bnfj+SJe28Wh73riD9iLg/ag==</FRMA>
+</CAF>
+    <TSTED>2016-09-07T19:00:32</TSTED>
+  </DD>
+  <FRMT algoritmo="SHA1withRSA">FvIGPt9ZsARXe+zNFzlu4fkGZuF4UHa11mhVBysGW4tjT7fS+WZQDri5vV8/R8+H9hBRzBs6/Kn+peGQcL3xcQ==</FRMT>
+</TED>
+  <TmstFirma>2016-09-07T19:00:32</TmstFirma></Documento>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo xmlns="http://www.w3.org/2000/09/xmldsig#"><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/><Reference URI="#T33F244"><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/><DigestValue>AA0EqSFM0mX6eS4JW+j8bFx7dcA=</DigestValue></Reference></SignedInfo><SignatureValue>Ju9pLQK+JmBurQDU9ga6gFqtKw4sYn4USi0c3ReshSMsCWf741ts0X6jqnE4yPJ5
+Y6qZwWeMSI149q81LtQyBOFOYmep5NAi3E9N8m5+9NE++j+I+pvR9YPYkckVTs2M
+WZaDIM0hKLMeazpmAtwzo7HEucYh0JEDsX/9gJCqIKZiGf/M+I4gSodQAhduMWcN
+5pXwSCnf+dFf6fQ0KPlRtQL8U8bexRx9bf6hu2a1xpCVxmVvPXR3ZEVAhbkMS7bl
+zObK+51P/fpthtdbMdApacNiRuKc5FVeykqg28gsG0rzV8xeOabBrJrCHtU+Tajc
+E2hEYk0sDtPaJ+UPQeqXpQ==</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>xcK5ilko6ML1WT2ttavc+dR3R9wiX4WevKWT76tY1bJtLsmunKRBqpQK9MIkVKVn
+we5C0MvNkVvcgtukwrdxvWgW+/ZCKt3IxZZLzhJaTp8HKHus4ZfMwLaF9YCl/iWQ
+fqacj2Lfn+Kp2kL83Fo0gwAZKEv0rijusL/nS4xvAAMBmcF4XT5beQI1lFg8/DTD
+jiwVBqgTaIzamTnU/33WmYcnSYpAzJSIjaasu7BPRBgjqFDePUpI3m98V8QfcNUk
+V3AN2wD+nLcrrH3r41f+IJ7QOys+aqURQ9ivEL59I4y9+uex7at0n/6Q9xGnegX6
+thw3/3VJlWFlmpHmxjBlmw==</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIF6zCCBNOgAwIBAgICShIwDQYJKoZIhvcNAQEFBQAwgaYxCzAJBgNVBAYTAkNM
+MRgwFgYDVQQKEw9BY2VwdGEuY29tIFMuQS4xSDBGBgNVBAMTP0FjZXB0YS5jb20g
+QXV0b3JpZGFkIENlcnRpZmljYWRvcmEgQ2xhc2UgMiBQZXJzb25hIE5hdHVyYWwg
+LSBHMzEeMBwGCSqGSIb3DQEJARYPaW5mb0BhY2VwdGEuY29tMRMwEQYDVQQFEwo5
+NjkxOTA1MC04MB4XDTE2MDYxMzIwNTE1OVoXDTE5MDYxMzIwNTE1OVowgZIxCzAJ
+BgNVBAYTAkNMMRgwFgYDVQQMEw9QRVJTT05BIE5BVFVSQUwxJjAkBgNVBAMTHUFM
+QkVSVE8gRU5SSVFVRSBHQVJSSURPIE5FSVJBMSwwKgYJKoZIhvcNAQkBFh1BR1JP
+UkVQVUVTVE9TX0FHTkBIT1RNQUlMLkNPTTETMBEGA1UEBRMKMTAxNTEzMjEtMTCC
+ASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAMXCuYpZKOjC9Vk9rbWr3PnU
+d0fcIl+Fnrylk++rWNWybS7JrpykQaqUCvTCJFSlZ8HuQtDLzZFb3ILbpMK3cb1o
+Fvv2QirdyMWWS84SWk6fByh7rOGXzMC2hfWApf4lkH6mnI9i35/iqdpC/NxaNIMA
+GShL9K4o7rC/50uMbwADAZnBeF0+W3kCNZRYPPw0w44sFQaoE2iM2pk51P991pmH
+J0mKQMyUiI2mrLuwT0QYI6hQ3j1KSN5vfFfEH3DVJFdwDdsA/py3K6x96+NX/iCe
+0DsrPmqlEUPYrxC+fSOMvfrnse2rdJ/+kPcRp3oF+rYcN/91SZVhZZqR5sYwZZsC
+AwEAAaOCAjMwggIvMB8GA1UdIwQYMBaAFEAkGj2pMXqFd3o9nnKTOYTlQDgZMB0G
+A1UdDgQWBBSQAZAnLz/h1Ut9QcGdQJTqJ0GXZjALBgNVHQ8EBAMCBPAwHQYDVR0l
+BBYwFAYIKwYBBQUHAwIGCCsGAQUFBwMEMBEGCWCGSAGG+EIBAQQEAwIFoDBuBgNV
+HSAEZzBlMGMGCisGAQQBtWuHagowVTAoBggrBgEFBQcCARYcaHR0cDovL3d3dy5h
+Y2VwdGEuY29tL0NQUy1HMzApBggrBgEFBQcCAjAdMBYWD0FjZXB0YS5jb20gUy5B
+LjADAgEJGgNUQkQwWgYDVR0SBFMwUaAYBggrBgEEAcEBAqAMFgo5NjkxOTA1MC04
+oCQGCCsGAQUFBwgDoBgwFgwKOTY5MTkwNTAtOAYIKwYBBAHBAQKBD2luZm9AYWNl
+cHRhLmNvbTBoBgNVHREEYTBfoBgGCCsGAQQBwQEBoAwWCjEwMTUxMzIxLTGgJAYI
+KwYBBQUHCAOgGDAWDAoxMDE1MTMyMS0xBggrBgEEAcEBAoEdQUdST1JFUFVFU1RP
+U19BR05ASE9UTUFJTC5DT00wPwYIKwYBBQUHAQEEMzAxMC8GCCsGAQUFBzABhiNo
+dHRwOi8vb2NzcC5hY2VwdGEuY29tL0NsYXNlM0Jpby1HMzA3BgNVHR8EMDAuMCyg
+KqAohiZodHRwOi8vY3JsLmFjZXB0YS5jb20vQ2xhc2UzQmlvLUczLmNybDANBgkq
+hkiG9w0BAQUFAAOCAQEAA1+wNLkbj6nBC8V8tjuayFGUCdMe8MRd8rtWswo5hMBN
+jKu6AWIX1A4Oi3IB0shj1RDbyfg6SNhSy5A7YyXROABjkq+KOzQNd4ruJmAGxBjE
+WibGuSTL6psul6RTbRg8Y9miG6+/eF5Gsz1gyyyZtyg48aRb6UsnSK0ruO1zZydt
+KVtfNIYWtHkvOFOywxm5u5LhxXFc7URFu9Z5tYiLiuWVZKmIm622EDWxvdAzeydA
+gGka4vo9iCU0pz/xkHxQHODg0LgJTVwZZ/tC59XquXSssZqOd8STHN/QhtVKDOUJ
+mRIfsCShj+zcrwwbQ/qolnofUSAA+Je+P/Esz+pAag==</X509Certificate></X509Data></KeyInfo></Signature></DTE>
+  </SetDTE>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo xmlns="http://www.w3.org/2000/09/xmldsig#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/><Reference URI="#SetDoc"><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/><DigestValue>KLn8+J1Fed45cCX3/vYXbZgswZs=</DigestValue></Reference></SignedInfo><SignatureValue>aryjLiBI7B9lXqgdB05QQYDugkAloVeYb0eFk0eggyuuKqegrWVx5OSnAUw3BzWX
+6zo9gqXgu0Rx3F2KwYYTupvfQ0edLFUc1aXhKOn8ZbOHOTKADXNtRpbyQ/LnlCod
+FYJ8ky5j/E/cDOdmW59xOEuzDCqfcZCZMiyFBmi83jkHyusCYkWXWZQPNy7pLik4
+wgbwKo6FXzzHYAy3QFWkucluY8jkoXF1VJkRkXnVsUr0XkoMgxKR7RRpaEl+DywH
+59Gm93hl6eOmVAYhZZtfSjLXCNq1hrfKoXOLkzBW8LT81eAX2JcSMuNXIwGw0MzF
+xr1/Yv5Ju1OhuIX1vkn/ew==</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>xcK5ilko6ML1WT2ttavc+dR3R9wiX4WevKWT76tY1bJtLsmunKRBqpQK9MIkVKVn
+we5C0MvNkVvcgtukwrdxvWgW+/ZCKt3IxZZLzhJaTp8HKHus4ZfMwLaF9YCl/iWQ
+fqacj2Lfn+Kp2kL83Fo0gwAZKEv0rijusL/nS4xvAAMBmcF4XT5beQI1lFg8/DTD
+jiwVBqgTaIzamTnU/33WmYcnSYpAzJSIjaasu7BPRBgjqFDePUpI3m98V8QfcNUk
+V3AN2wD+nLcrrH3r41f+IJ7QOys+aqURQ9ivEL59I4y9+uex7at0n/6Q9xGnegX6
+thw3/3VJlWFlmpHmxjBlmw==</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIF6zCCBNOgAwIBAgICShIwDQYJKoZIhvcNAQEFBQAwgaYxCzAJBgNVBAYTAkNM
+MRgwFgYDVQQKEw9BY2VwdGEuY29tIFMuQS4xSDBGBgNVBAMTP0FjZXB0YS5jb20g
+QXV0b3JpZGFkIENlcnRpZmljYWRvcmEgQ2xhc2UgMiBQZXJzb25hIE5hdHVyYWwg
+LSBHMzEeMBwGCSqGSIb3DQEJARYPaW5mb0BhY2VwdGEuY29tMRMwEQYDVQQFEwo5
+NjkxOTA1MC04MB4XDTE2MDYxMzIwNTE1OVoXDTE5MDYxMzIwNTE1OVowgZIxCzAJ
+BgNVBAYTAkNMMRgwFgYDVQQMEw9QRVJTT05BIE5BVFVSQUwxJjAkBgNVBAMTHUFM
+QkVSVE8gRU5SSVFVRSBHQVJSSURPIE5FSVJBMSwwKgYJKoZIhvcNAQkBFh1BR1JP
+UkVQVUVTVE9TX0FHTkBIT1RNQUlMLkNPTTETMBEGA1UEBRMKMTAxNTEzMjEtMTCC
+ASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAMXCuYpZKOjC9Vk9rbWr3PnU
+d0fcIl+Fnrylk++rWNWybS7JrpykQaqUCvTCJFSlZ8HuQtDLzZFb3ILbpMK3cb1o
+Fvv2QirdyMWWS84SWk6fByh7rOGXzMC2hfWApf4lkH6mnI9i35/iqdpC/NxaNIMA
+GShL9K4o7rC/50uMbwADAZnBeF0+W3kCNZRYPPw0w44sFQaoE2iM2pk51P991pmH
+J0mKQMyUiI2mrLuwT0QYI6hQ3j1KSN5vfFfEH3DVJFdwDdsA/py3K6x96+NX/iCe
+0DsrPmqlEUPYrxC+fSOMvfrnse2rdJ/+kPcRp3oF+rYcN/91SZVhZZqR5sYwZZsC
+AwEAAaOCAjMwggIvMB8GA1UdIwQYMBaAFEAkGj2pMXqFd3o9nnKTOYTlQDgZMB0G
+A1UdDgQWBBSQAZAnLz/h1Ut9QcGdQJTqJ0GXZjALBgNVHQ8EBAMCBPAwHQYDVR0l
+BBYwFAYIKwYBBQUHAwIGCCsGAQUFBwMEMBEGCWCGSAGG+EIBAQQEAwIFoDBuBgNV
+HSAEZzBlMGMGCisGAQQBtWuHagowVTAoBggrBgEFBQcCARYcaHR0cDovL3d3dy5h
+Y2VwdGEuY29tL0NQUy1HMzApBggrBgEFBQcCAjAdMBYWD0FjZXB0YS5jb20gUy5B
+LjADAgEJGgNUQkQwWgYDVR0SBFMwUaAYBggrBgEEAcEBAqAMFgo5NjkxOTA1MC04
+oCQGCCsGAQUFBwgDoBgwFgwKOTY5MTkwNTAtOAYIKwYBBAHBAQKBD2luZm9AYWNl
+cHRhLmNvbTBoBgNVHREEYTBfoBgGCCsGAQQBwQEBoAwWCjEwMTUxMzIxLTGgJAYI
+KwYBBQUHCAOgGDAWDAoxMDE1MTMyMS0xBggrBgEEAcEBAoEdQUdST1JFUFVFU1RP
+U19BR05ASE9UTUFJTC5DT00wPwYIKwYBBQUHAQEEMzAxMC8GCCsGAQUFBzABhiNo
+dHRwOi8vb2NzcC5hY2VwdGEuY29tL0NsYXNlM0Jpby1HMzA3BgNVHR8EMDAuMCyg
+KqAohiZodHRwOi8vY3JsLmFjZXB0YS5jb20vQ2xhc2UzQmlvLUczLmNybDANBgkq
+hkiG9w0BAQUFAAOCAQEAA1+wNLkbj6nBC8V8tjuayFGUCdMe8MRd8rtWswo5hMBN
+jKu6AWIX1A4Oi3IB0shj1RDbyfg6SNhSy5A7YyXROABjkq+KOzQNd4ruJmAGxBjE
+WibGuSTL6psul6RTbRg8Y9miG6+/eF5Gsz1gyyyZtyg48aRb6UsnSK0ruO1zZydt
+KVtfNIYWtHkvOFOywxm5u5LhxXFc7URFu9Z5tYiLiuWVZKmIm622EDWxvdAzeydA
+gGka4vo9iCU0pz/xkHxQHODg0LgJTVwZZ/tC59XquXSssZqOd8STHN/QhtVKDOUJ
+mRIfsCShj+zcrwwbQ/qolnofUSAA+Je+P/Esz+pAag==</X509Certificate></X509Data></KeyInfo></Signature></EnvioDTE>

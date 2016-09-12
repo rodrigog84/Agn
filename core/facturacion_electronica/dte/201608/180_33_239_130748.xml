@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<EnvioDTE xmlns="http://www.sii.cl/SiiDte" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sii.cl/SiiDte EnvioDTE_v10.xsd" version="1.0">
+  <SetDTE ID="SetDoc">
+    <Caratula version="1.0">
+      <RutEmisor>10151321-1</RutEmisor>
+      <RutEnvia>10151321-1</RutEnvia>
+      <RutReceptor>60803000-K</RutReceptor>
+      <FchResol>2014-08-22</FchResol>
+      <NroResol>80</NroResol>
+      <TmstFirmaEnv>2016-08-30T13:07:48</TmstFirmaEnv>
+      <SubTotDTE>
+        <TpoDTE>33</TpoDTE>
+        <NroDTE>1</NroDTE>
+      </SubTotDTE>
+    </Caratula>
+    <DTE version="1.0">
+  <Documento ID="T33F180">
+    <Encabezado>
+      <IdDoc>
+        <TipoDTE>33</TipoDTE>
+        <Folio>180</Folio>
+        <FchEmis>2016-08-30</FchEmis>
+      </IdDoc>
+      <Emisor>
+        <RUTEmisor>10151321-1</RUTEmisor>
+        <RznSoc>ALBERTO ENRIQUE GARRIDO NEIRA</RznSoc>
+        <GiroEmis>Venta al por mayor de maquinaria</GiroEmis>
+        <Acteco>515009</Acteco>
+        <DirOrigen>15 ORIENTE 2 SUR No.2201</DirOrigen>
+        <CmnaOrigen>TALCA</CmnaOrigen>
+      </Emisor>
+      <Receptor>
+        <RUTRecep>3167879-K</RUTRecep>
+        <RznSocRecep>ANDREA VIRGINIA MARY JUANITA GESSWEIN ROSENQVIST</RznSocRecep>
+        <GiroRecep>OTROS CULTIVOS N.C.P.</GiroRecep>
+        <DirRecep>PARCELA SANTA ANDREA CAM. LAS RASTRAS</DirRecep>
+        <CmnaRecep>TALCA</CmnaRecep>
+      </Receptor>
+      <Totales>
+        <MntNeto>4765</MntNeto>
+        <TasaIVA>19</TasaIVA>
+        <IVA>905</IVA>
+        <MntTotal>5670</MntTotal>
+      </Totales>
+    </Encabezado>
+    <Detalle>
+      <NroLinDet>1</NroLinDet>
+      <NmbItem>PERNO HEX CORRIENTE GRADO 5 NEGRO 3/4 X 16 X 4.1/2</NmbItem>
+      <QtyItem>3.00</QtyItem>
+      <PrcItem>1588</PrcItem>
+      <MontoItem>4765</MontoItem>
+    </Detalle>
+    <TED version="1.0">
+  <DD>
+    <RE>10151321-1</RE>
+    <TD>33</TD>
+    <F>180</F>
+    <FE>2016-08-30</FE>
+    <RR>3167879-K</RR>
+    <RSR>ANDREA VIRGINIA MARY JUANITA GESSWEIN RO</RSR>
+    <MNT>5670</MNT>
+    <IT1>PERNO HEX CORRIENTE GRADO 5 NEGRO 3/4 X </IT1>
+    <CAF version="1.0">
+<DA>
+<RE>10151321-1</RE>
+<RS>ALBERTO ENRIQUE GARRIDO NEIRA</RS>
+<TD>33</TD>
+<RNG><D>175</D><H>188</H></RNG>
+<FA>2016-08-20</FA>
+<RSAPK><M>1KCyRQuSPQeO2U8IVCibZ1yetRr5kH42+W+n0znZL6AJ/BRPmGXxVthLaT2OwGvKiGN5o1kX4FSDkpDRXPpH0Q==</M><E>Aw==</E></RSAPK>
+<IDK>300</IDK>
+</DA>
+<FRMA algoritmo="SHA1withRSA">HhB/RmVydZ+gnKwQ5jUVRidEqLgRL3hr31YhQszNPLn7bKPag5N2CsnDErG3N5+ElppNnufGijWqe5XJPdJp5Q==</FRMA>
+</CAF>
+    <TSTED>2016-08-30T13:07:48</TSTED>
+  </DD>
+  <FRMT algoritmo="SHA1withRSA">l3i1N4E7qiXDOmDvd2cNwEhMEvMDUwfk2+c5cDAa1SwhOBC3OMEAFH/SvhO+ec62poyV++9ZhyBRufcuA/2Eag==</FRMT>
+</TED>
+  <TmstFirma>2016-08-30T13:07:48</TmstFirma></Documento>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo xmlns="http://www.w3.org/2000/09/xmldsig#"><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/><Reference URI="#T33F180"><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/><DigestValue>EFC70cmz8oauoHq6HWCj8PPkCgo=</DigestValue></Reference></SignedInfo><SignatureValue>dnGOQwDrnLefXmUw9HntyKMs+M5+3PaaPqo3u+NrOqzU6DcwJWdLifsMjxO35wED
+IOVbwk4Qz5CGyRb/HEeiQ2yUeTbtlZ42LST1xE6CiHyVqkJ4AJl5FBaENENzsPoI
+WLH4S/YlhwoXFdu3EkLR4/b/oUBquk2bA1RztlH9NVTGROw2PKxuCEJUIsaZDcee
+pvh5/6lj1MIRalX3uUOtwgcOYlvoDZZnFOaXfxoeirI88zIpzTjZ5Ks6zRuBZC9O
+mlUyUWwOVH6b/+Obr5arlel3+y1AD6K75brRsWlIG/phfUag7c+mzhDmOdt2hk6m
+Sjc7fBrtjrc8vdc63GXk1Q==</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>xcK5ilko6ML1WT2ttavc+dR3R9wiX4WevKWT76tY1bJtLsmunKRBqpQK9MIkVKVn
+we5C0MvNkVvcgtukwrdxvWgW+/ZCKt3IxZZLzhJaTp8HKHus4ZfMwLaF9YCl/iWQ
+fqacj2Lfn+Kp2kL83Fo0gwAZKEv0rijusL/nS4xvAAMBmcF4XT5beQI1lFg8/DTD
+jiwVBqgTaIzamTnU/33WmYcnSYpAzJSIjaasu7BPRBgjqFDePUpI3m98V8QfcNUk
+V3AN2wD+nLcrrH3r41f+IJ7QOys+aqURQ9ivEL59I4y9+uex7at0n/6Q9xGnegX6
+thw3/3VJlWFlmpHmxjBlmw==</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIF6zCCBNOgAwIBAgICShIwDQYJKoZIhvcNAQEFBQAwgaYxCzAJBgNVBAYTAkNM
+MRgwFgYDVQQKEw9BY2VwdGEuY29tIFMuQS4xSDBGBgNVBAMTP0FjZXB0YS5jb20g
+QXV0b3JpZGFkIENlcnRpZmljYWRvcmEgQ2xhc2UgMiBQZXJzb25hIE5hdHVyYWwg
+LSBHMzEeMBwGCSqGSIb3DQEJARYPaW5mb0BhY2VwdGEuY29tMRMwEQYDVQQFEwo5
+NjkxOTA1MC04MB4XDTE2MDYxMzIwNTE1OVoXDTE5MDYxMzIwNTE1OVowgZIxCzAJ
+BgNVBAYTAkNMMRgwFgYDVQQMEw9QRVJTT05BIE5BVFVSQUwxJjAkBgNVBAMTHUFM
+QkVSVE8gRU5SSVFVRSBHQVJSSURPIE5FSVJBMSwwKgYJKoZIhvcNAQkBFh1BR1JP
+UkVQVUVTVE9TX0FHTkBIT1RNQUlMLkNPTTETMBEGA1UEBRMKMTAxNTEzMjEtMTCC
+ASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAMXCuYpZKOjC9Vk9rbWr3PnU
+d0fcIl+Fnrylk++rWNWybS7JrpykQaqUCvTCJFSlZ8HuQtDLzZFb3ILbpMK3cb1o
+Fvv2QirdyMWWS84SWk6fByh7rOGXzMC2hfWApf4lkH6mnI9i35/iqdpC/NxaNIMA
+GShL9K4o7rC/50uMbwADAZnBeF0+W3kCNZRYPPw0w44sFQaoE2iM2pk51P991pmH
+J0mKQMyUiI2mrLuwT0QYI6hQ3j1KSN5vfFfEH3DVJFdwDdsA/py3K6x96+NX/iCe
+0DsrPmqlEUPYrxC+fSOMvfrnse2rdJ/+kPcRp3oF+rYcN/91SZVhZZqR5sYwZZsC
+AwEAAaOCAjMwggIvMB8GA1UdIwQYMBaAFEAkGj2pMXqFd3o9nnKTOYTlQDgZMB0G
+A1UdDgQWBBSQAZAnLz/h1Ut9QcGdQJTqJ0GXZjALBgNVHQ8EBAMCBPAwHQYDVR0l
+BBYwFAYIKwYBBQUHAwIGCCsGAQUFBwMEMBEGCWCGSAGG+EIBAQQEAwIFoDBuBgNV
+HSAEZzBlMGMGCisGAQQBtWuHagowVTAoBggrBgEFBQcCARYcaHR0cDovL3d3dy5h
+Y2VwdGEuY29tL0NQUy1HMzApBggrBgEFBQcCAjAdMBYWD0FjZXB0YS5jb20gUy5B
+LjADAgEJGgNUQkQwWgYDVR0SBFMwUaAYBggrBgEEAcEBAqAMFgo5NjkxOTA1MC04
+oCQGCCsGAQUFBwgDoBgwFgwKOTY5MTkwNTAtOAYIKwYBBAHBAQKBD2luZm9AYWNl
+cHRhLmNvbTBoBgNVHREEYTBfoBgGCCsGAQQBwQEBoAwWCjEwMTUxMzIxLTGgJAYI
+KwYBBQUHCAOgGDAWDAoxMDE1MTMyMS0xBggrBgEEAcEBAoEdQUdST1JFUFVFU1RP
+U19BR05ASE9UTUFJTC5DT00wPwYIKwYBBQUHAQEEMzAxMC8GCCsGAQUFBzABhiNo
+dHRwOi8vb2NzcC5hY2VwdGEuY29tL0NsYXNlM0Jpby1HMzA3BgNVHR8EMDAuMCyg
+KqAohiZodHRwOi8vY3JsLmFjZXB0YS5jb20vQ2xhc2UzQmlvLUczLmNybDANBgkq
+hkiG9w0BAQUFAAOCAQEAA1+wNLkbj6nBC8V8tjuayFGUCdMe8MRd8rtWswo5hMBN
+jKu6AWIX1A4Oi3IB0shj1RDbyfg6SNhSy5A7YyXROABjkq+KOzQNd4ruJmAGxBjE
+WibGuSTL6psul6RTbRg8Y9miG6+/eF5Gsz1gyyyZtyg48aRb6UsnSK0ruO1zZydt
+KVtfNIYWtHkvOFOywxm5u5LhxXFc7URFu9Z5tYiLiuWVZKmIm622EDWxvdAzeydA
+gGka4vo9iCU0pz/xkHxQHODg0LgJTVwZZ/tC59XquXSssZqOd8STHN/QhtVKDOUJ
+mRIfsCShj+zcrwwbQ/qolnofUSAA+Je+P/Esz+pAag==</X509Certificate></X509Data></KeyInfo></Signature></DTE>
+  </SetDTE>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo xmlns="http://www.w3.org/2000/09/xmldsig#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/><Reference URI="#SetDoc"><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/><DigestValue>fHA+OH+iq4zx0nZGETVAl7xnMLs=</DigestValue></Reference></SignedInfo><SignatureValue>u2ZODtU3asEtMfH4aT1dYIAptTMP9wO/RbEHbMJGd/YMnze6XTumpx6GOq8yAEb0
+YR63SvCjwhHkVJU9O6ww42Z4ptZrrRdwzR2lEvDHRMnQMbZIkv7DMfzNPISGG3Cz
+mWRa4QwXZ2WMrWoDkBmVzVJZC7PQ+f69wO7Ky4mkE+D5N9sllwd50XyPpRTDl2kR
+VR0MU7p3mR9FB+oChCWwOScKnL05QPcBetitmvx2pO2gGH2/z3VzD6vVPe7GhXDL
+jytlHM3mtep9EFysunEoyXz4J3b6RXOIWqt7Ucnw/87WzL6OA5fTSpp/t+haQXGM
+IZ2H8EA/GunXYTRENn0/ug==</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>xcK5ilko6ML1WT2ttavc+dR3R9wiX4WevKWT76tY1bJtLsmunKRBqpQK9MIkVKVn
+we5C0MvNkVvcgtukwrdxvWgW+/ZCKt3IxZZLzhJaTp8HKHus4ZfMwLaF9YCl/iWQ
+fqacj2Lfn+Kp2kL83Fo0gwAZKEv0rijusL/nS4xvAAMBmcF4XT5beQI1lFg8/DTD
+jiwVBqgTaIzamTnU/33WmYcnSYpAzJSIjaasu7BPRBgjqFDePUpI3m98V8QfcNUk
+V3AN2wD+nLcrrH3r41f+IJ7QOys+aqURQ9ivEL59I4y9+uex7at0n/6Q9xGnegX6
+thw3/3VJlWFlmpHmxjBlmw==</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIF6zCCBNOgAwIBAgICShIwDQYJKoZIhvcNAQEFBQAwgaYxCzAJBgNVBAYTAkNM
+MRgwFgYDVQQKEw9BY2VwdGEuY29tIFMuQS4xSDBGBgNVBAMTP0FjZXB0YS5jb20g
+QXV0b3JpZGFkIENlcnRpZmljYWRvcmEgQ2xhc2UgMiBQZXJzb25hIE5hdHVyYWwg
+LSBHMzEeMBwGCSqGSIb3DQEJARYPaW5mb0BhY2VwdGEuY29tMRMwEQYDVQQFEwo5
+NjkxOTA1MC04MB4XDTE2MDYxMzIwNTE1OVoXDTE5MDYxMzIwNTE1OVowgZIxCzAJ
+BgNVBAYTAkNMMRgwFgYDVQQMEw9QRVJTT05BIE5BVFVSQUwxJjAkBgNVBAMTHUFM
+QkVSVE8gRU5SSVFVRSBHQVJSSURPIE5FSVJBMSwwKgYJKoZIhvcNAQkBFh1BR1JP
+UkVQVUVTVE9TX0FHTkBIT1RNQUlMLkNPTTETMBEGA1UEBRMKMTAxNTEzMjEtMTCC
+ASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAMXCuYpZKOjC9Vk9rbWr3PnU
+d0fcIl+Fnrylk++rWNWybS7JrpykQaqUCvTCJFSlZ8HuQtDLzZFb3ILbpMK3cb1o
+Fvv2QirdyMWWS84SWk6fByh7rOGXzMC2hfWApf4lkH6mnI9i35/iqdpC/NxaNIMA
+GShL9K4o7rC/50uMbwADAZnBeF0+W3kCNZRYPPw0w44sFQaoE2iM2pk51P991pmH
+J0mKQMyUiI2mrLuwT0QYI6hQ3j1KSN5vfFfEH3DVJFdwDdsA/py3K6x96+NX/iCe
+0DsrPmqlEUPYrxC+fSOMvfrnse2rdJ/+kPcRp3oF+rYcN/91SZVhZZqR5sYwZZsC
+AwEAAaOCAjMwggIvMB8GA1UdIwQYMBaAFEAkGj2pMXqFd3o9nnKTOYTlQDgZMB0G
+A1UdDgQWBBSQAZAnLz/h1Ut9QcGdQJTqJ0GXZjALBgNVHQ8EBAMCBPAwHQYDVR0l
+BBYwFAYIKwYBBQUHAwIGCCsGAQUFBwMEMBEGCWCGSAGG+EIBAQQEAwIFoDBuBgNV
+HSAEZzBlMGMGCisGAQQBtWuHagowVTAoBggrBgEFBQcCARYcaHR0cDovL3d3dy5h
+Y2VwdGEuY29tL0NQUy1HMzApBggrBgEFBQcCAjAdMBYWD0FjZXB0YS5jb20gUy5B
+LjADAgEJGgNUQkQwWgYDVR0SBFMwUaAYBggrBgEEAcEBAqAMFgo5NjkxOTA1MC04
+oCQGCCsGAQUFBwgDoBgwFgwKOTY5MTkwNTAtOAYIKwYBBAHBAQKBD2luZm9AYWNl
+cHRhLmNvbTBoBgNVHREEYTBfoBgGCCsGAQQBwQEBoAwWCjEwMTUxMzIxLTGgJAYI
+KwYBBQUHCAOgGDAWDAoxMDE1MTMyMS0xBggrBgEEAcEBAoEdQUdST1JFUFVFU1RP
+U19BR05ASE9UTUFJTC5DT00wPwYIKwYBBQUHAQEEMzAxMC8GCCsGAQUFBzABhiNo
+dHRwOi8vb2NzcC5hY2VwdGEuY29tL0NsYXNlM0Jpby1HMzA3BgNVHR8EMDAuMCyg
+KqAohiZodHRwOi8vY3JsLmFjZXB0YS5jb20vQ2xhc2UzQmlvLUczLmNybDANBgkq
+hkiG9w0BAQUFAAOCAQEAA1+wNLkbj6nBC8V8tjuayFGUCdMe8MRd8rtWswo5hMBN
+jKu6AWIX1A4Oi3IB0shj1RDbyfg6SNhSy5A7YyXROABjkq+KOzQNd4ruJmAGxBjE
+WibGuSTL6psul6RTbRg8Y9miG6+/eF5Gsz1gyyyZtyg48aRb6UsnSK0ruO1zZydt
+KVtfNIYWtHkvOFOywxm5u5LhxXFc7URFu9Z5tYiLiuWVZKmIm622EDWxvdAzeydA
+gGka4vo9iCU0pz/xkHxQHODg0LgJTVwZZ/tC59XquXSssZqOd8STHN/QhtVKDOUJ
+mRIfsCShj+zcrwwbQ/qolnofUSAA+Je+P/Esz+pAag==</X509Certificate></X509Data></KeyInfo></Signature></EnvioDTE>
