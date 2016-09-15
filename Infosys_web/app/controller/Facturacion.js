@@ -841,7 +841,9 @@ cargar_listado_contribuyentes: function(){
           i++;
         })
 
-        var view =this.getFormularioexportar()
+
+
+        var view =this.getFormularioexportarfacturas()
         var viewnew =this.getFacturasprincipal()
         var fecha = view.down('#fechaId').getSubmitValue();
         var opcion = viewnew.down('#tipoSeleccionId').getValue()
@@ -863,10 +865,12 @@ cargar_listado_contribuyentes: function(){
 
         };
 
-        if (opcion == "LIBRO VENTAS"){
+        console.log(opcion)
 
+        if (opcion == "LIBRO VENTAS"){
+              console.log(tipo)
              
-             if (tipo == 1){
+             if (tipo == 101){
 
              window.open(preurl + 'adminServicesExcel/exportarExcellibroFacturas?cols='+Ext.JSON.encode(jsonCol)+'&fecha='+fecha+'&fecha2='+fecha2);
              view.close();
@@ -897,7 +901,7 @@ cargar_listado_contribuyentes: function(){
 
         }else{
 
-             if (tipo == 1){
+             if (tipo == 101){
 
              window.open(preurl + 'adminServicesExcel/exportarExcelFacturas?cols='+Ext.JSON.encode(jsonCol)+'&fecha='+fecha+'&fecha2='+fecha2+'&opcion='+opcion+'&nombre='+nombre);
              view.close();
