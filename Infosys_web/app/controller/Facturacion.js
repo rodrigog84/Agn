@@ -841,9 +841,7 @@ cargar_listado_contribuyentes: function(){
           i++;
         })
 
-
-
-        var view =this.getFormularioexportarfacturas()
+        var view =this.getFormularioexportar()
         var viewnew =this.getFacturasprincipal()
         var fecha = view.down('#fechaId').getSubmitValue();
         var opcion = viewnew.down('#tipoSeleccionId').getValue()
