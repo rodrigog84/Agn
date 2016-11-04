@@ -280,3 +280,10 @@ ENGINE=InnoDB
  INSERT INTO `correlativos` (`id`, `nombre`, `correlativo`) VALUES (101, 'FACTURA ELECTRONICA', 0);
  INSERT INTO `correlativos` (`id`, `nombre`, `correlativo`) VALUES (103, 'FACTURA EXENTA ELECTRONICA', 0);
  INSERT INTO `correlativos` (`id`, `nombre`, `correlativo`) VALUES (105, 'GUIA DE DESPACHO ELECTRONICA', 0);
+
+ /*******************************************************************/
+
+ ALTER TABLE `folios_caf`
+	ADD COLUMN `dte_cliente` TEXT NOT NULL AFTER `dte`;
+ALTER TABLE `folios_caf`
+	ADD COLUMN `archivo_dte_cliente` VARCHAR(50) NOT NULL AFTER `archivo_dte`;
