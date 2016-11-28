@@ -533,12 +533,13 @@ Ext.define('Infosys_web.controller.Ordencompra', {
             var iddescuento = 0;
         };
               
-        var tot = ((cantidad * precio) - descuento);
-        var neto = ((tot / 1.19));
+              
+        var neto = ((cantidad * precio) - descuento);
+        var tot = (Math.round(neto * 1.19));
         var exists = 0;
-        var iva = (tot - neto);
-        var neto = (tot - iva);
+        var iva = (tot - neto );
         var total = ((neto + iva ));
+        
         
         if(!producto){
             
@@ -1510,11 +1511,11 @@ Ext.define('Infosys_web.controller.Ordencompra', {
         var dcto = view.down('#descuentovalorId').getValue();
 
        stItem.each(function(r){
-            pretotal = pretotal + r.data.total
+            pretotal = pretotal + (parseInt(r.data.total))
             //iva = iva + r.data.iva
             //neto = neto + r.data.neto
         });
-        neto = ((pretotal /1.19));
+        neto = (Math.round(pretotal /1.19));
         iva = ((pretotal - neto));
         afecto = neto;
         neto = neto;
@@ -1542,10 +1543,10 @@ Ext.define('Infosys_web.controller.Ordencompra', {
 
         stItem.each(function(r){
             pretotal = pretotal + r.data.total
-            iva = iva + r.data.iva
-            neto = neto + r.data.neto
+            //iva = iva + r.data.iva
+            //neto = neto + r.data.neto
         });
-        neto = ((pretotal /1.19));
+        neto = (Math.round(pretotal /1.19));
         iva = ((pretotal - neto));
         afecto = neto;
         neto = neto;
@@ -1676,13 +1677,12 @@ Ext.define('Infosys_web.controller.Ordencompra', {
             var iddescuento = 0;
         };
               
-        var tot = ((cantidad * precio) - descuento);
-        var neto = ((tot / 1.19));
+        var neto = ((cantidad * precio) - descuento);
+        var tot = (Math.round(neto * 1.19));
         var exists = 0;
-        var iva = (tot - neto);
-        var neto = (tot - iva);
+        var iva = (tot - neto );
         var total = ((neto + iva ));
-
+        
         
         if(!producto){
             
@@ -1722,12 +1722,7 @@ Ext.define('Infosys_web.controller.Ordencompra', {
         });
         if(exists == 1)
             return;
-
-        console.log(neto);
-        console.log(iva);
-        console.log(total);
-        
-        
+     
         stItem.add(new Infosys_web.model.ordencompra.Item({
             id: producto,
             id_producto: producto,
