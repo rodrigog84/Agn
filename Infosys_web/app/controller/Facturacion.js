@@ -166,7 +166,9 @@ Ext.define('Infosys_web.controller.Facturacion', {
             'topmenus menuitem[action=mhistlibrocompraventa]': {
                 click: this.mhistlibrocompraventa
             },                                                 
-
+            'librocompraventa': {
+                 verEstadoDte: this.verEstadoDte
+             },
             'topmenus menuitem[action=memail]': {
                 click: this.memail
             },             
@@ -419,7 +421,9 @@ cargar_listado_contribuyentes: function(){
         }else if(t == 5){
              url = preurl + 'facturas/ver_dte/'+r.data.id+'/cliente',
              window.open(url,'_blank');   
-         }        
+         }else if(t == 6){
+            Ext.create('Infosys_web.view.facturaelectronica.verEstadoEnvioLibro', {idlibro: r.data.id});                          
+         }      
     },
 
 
