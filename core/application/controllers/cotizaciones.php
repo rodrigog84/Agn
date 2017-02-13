@@ -386,7 +386,7 @@ class Cotizaciones extends CI_Controller {
 		<html xmlns="http://www.w3.org/1999/xhtml">
 		<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-		<title>Untitled Document</title>
+		<title>Cotizacion</title>
 		<style type="text/css">
 		td {
 			font-size: 16px;
@@ -401,11 +401,11 @@ class Cotizaciones extends CI_Controller {
 		  <tr>
 		    <td width="197px"><img src="http://angus.agricultorestalca.cl/Agn/Infosys_web/resources/images/logo.jpg" width="150" height="136" /></td>
 		    <td width="493px" style="font-size: 14px;text-align:center;vertical-align:text-top"	>
-		    <p>Agrorepuestos Alberto Garrido Neira</p>
-		    <p>RUT:</p>
-		    <p>- Talca - Chile</p>
-		    <p>Fonos: </p>
-		    <p>http://</p>
+		    <p>ALBERTO ANTONIO GARRIDO NEIRA</p>
+		    <p>RUT:10.151.321-1</p>
+		    <p>Giro : Venta al por mayor de maquinarias</p>
+		    <p>Direccion : 15 Oriente 2 Sur No.2201 </p>
+		    <p>Fono : 712263600, Talca</p>
 		    </td>
 		    <td width="296px" style="font-size: 16px;text-align:left;vertical-align:text-top"	>
 		          <p>COTIZACION N°: '.$codigo.'</p>
@@ -438,8 +438,8 @@ class Cotizaciones extends CI_Controller {
 		    		<tr>
 		    			<td width="197px">Giro:</td>
 		    			<td width="395px">'. $row->giro_empresa .'</td>
-		    			<td width="197px">Fax:</td>
-		    			<td width="197px">&nbsp;</td>
+		    			<td width="197px">Vendedor:</td>
+		    			<td width="197px">'. $vendedor .'</td>
 		    		</tr>		    				    		
 		    		<tr>
 		    			<td width="197px">Ciudad:</td>
@@ -458,16 +458,19 @@ class Cotizaciones extends CI_Controller {
 		  </tr>
 		  <tr>
 		    <td colspan="3" >
-		    	<table width="987px" cellspacing="0" cellpadding="0" >
+		    	<table width="1087px" cellspacing="0" cellpadding="0" >
 		      <tr>
-		        <td width="148px"  style="border-bottom:1pt solid black;border-top:1pt solid black;text-align:right;" >Cantidad</td>
-		        <td width="395px"  style="border-bottom:1pt solid black;border-top:1pt solid black;text-align:center;" >Descripci&oacute;n</td>
-		        <td width="148px"  style="border-bottom:1pt solid black;border-top:1pt solid black;text-align:right;" >Precio/Unidad</td>
-		        <td width="148px"  style="border-bottom:1pt solid black;border-top:1pt solid black;text-align:right;" >Precio/Oferta</td>
-		        <td width="148px"  style="border-bottom:1pt solid black;border-top:1pt solid black;text-align:right;" >Total</td>
+		        <td width="40px"  style="border-bottom:1pt solid black;border-top:1pt solid black;text-align:right;" >Nro. Linea</td>
+		        <td width="10px"  style="border-bottom:1pt solid black;border-top:1pt solid black;text-align:right;" >&nbsp;</td>
+		        <td width="695px"  style="border-bottom:1pt solid black;border-top:1pt solid black;text-align:center;" >Descripci&oacute;n</td>
+		        <td width="128px"  style="border-bottom:1pt solid black;border-top:1pt solid black;text-align:right;" >Cantidad</td>
+		        <td width="128px"  style="border-bottom:1pt solid black;border-top:1pt solid black;text-align:right;" >Precio</td>
+		        <td width="128px"  style="border-bottom:1pt solid black;border-top:1pt solid black;text-align:right;" >Total</td>
 		      </tr>';
 		$descripciones = '';
 		$i = 0;
+		$linea=0;
+		$neto=0;
 		foreach($items->result() as $v){
 			//$i = 0;
 			//while($i < 30){
@@ -475,21 +478,27 @@ class Cotizaciones extends CI_Controller {
 			$producto = $this->db->get("productos");	
 			$producto = $producto->result();
 			$producto = $producto[0];
-			$totaliva = 
-
+			$linea= $linea +1;
+			$subtotal = (($v->neto - $v->descuento) / ($v->cantidad));
+			
+			$neto = $neto + ($v->neto - $v->descuento);
+			$iva = (($neto * 19)/100);
+			//$total = $total + (($v->neto - $v->descuento) + $iva);
+			
 			$html .= '<tr>
+			<td style="text-align:right">'.$linea.'</td>	
+			<td style="text-align:right">&nbsp;&nbsp;</td>			
+			<td style="text-align:left">'.$producto->nombre.'</td>
 			<td style="text-align:right">'.number_format($v->cantidad,0,'.',',').'&nbsp;&nbsp;</td>			
-			<td style="text-align:left">'.$producto->nombre.'</td>			
-			<td align="right">$ '.number_format($v->subtotal, 0, '.', ',').'</td>
-			<td align="right">$ '.number_format($v->subtotal - ($v->descuento/$v->cantidad), 0, '.', ',').'</td>
-
+			<td align="right">$ '.number_format($v->total / $v->cantidad, 2, '.', ',').'</td>
 			<td align="right">$ '.number_format($v->total, 0, '.', ',').'</td>
 			</tr>';
+			
+					
 			
 			//}
 			$i++;
 		}
-
 		// RELLENA ESPACIO
 		while($i < 30){
 			$html .= '<tr><td colspan="5">&nbsp;</td></tr>';
@@ -564,7 +573,7 @@ class Cotizaciones extends CI_Controller {
 		//==============================================================
 		//==============================================================
 
-		include(dirname(__FILE__)."/../libraries/MPDF54/mpdf.php");
+		include(dirname(__FILE__)."/../libraries/mpdf60/mpdf.php");
 
 		$mpdf= new mPDF(
 			'',    // mode - default ''
@@ -619,7 +628,7 @@ class Cotizaciones extends CI_Controller {
 		<html xmlns="http://www.w3.org/1999/xhtml">
 		<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-		<title>Untitled Document</title>
+		<title>Cotizacion</title>
 		<style type="text/css">
 		td {
 			font-size: 16px;
@@ -634,11 +643,11 @@ class Cotizaciones extends CI_Controller {
 		  <tr>
 		   <td width="197px"><img src="http://angus.agricultorestalca.cl/Agn/Infosys_web/resources/images/logo.jpg" width="150" height="136" /></td>
 		    <td width="493px" style="font-size: 14px;text-align:center;vertical-align:text-top"	>
-		    <p>Agrorepuestos Alberto Garrido Neira</p>
-		    <p>RUT:</p>
-		    <p>- Talca - Chile</p>
-		    <p>Fonos: </p>
-		    <p>http://</p>
+		    <p>ALBERTO ANTONIO GARRIDO NEIRA</p>
+		    <p>RUT:10.151.321-1</p>
+		    <p>Giro : Venta al por mayor de maquinarias</p>
+		    <p>Direccion : 15 Oriente 2 Sur No.2201 </p>
+		    <p>Fono : 712263600, Talca</p>
 		    </td>
 		    <td width="296px" style="font-size: 16px;text-align:left;vertical-align:text-top"	>
 		          <p>COTIZACION N°: '.$codigo.'</p>
@@ -671,8 +680,8 @@ class Cotizaciones extends CI_Controller {
 		    		<tr>
 		    			<td width="197px">Giro:</td>
 		    			<td width="395px">'. $row->giro_empresa .'</td>
-		    			<td width="197px">Fax:</td>
-		    			<td width="197px">&nbsp;</td>
+		    			<td width="197px">Vendedor:</td>
+		    			<td width="197px">'. $vendedor .'</td>
 		    		</tr>		    				    		
 		    		<tr>
 		    			<td width="197px">Ciudad:</td>
@@ -691,16 +700,19 @@ class Cotizaciones extends CI_Controller {
 		  </tr>
 		  <tr>
 		    <td colspan="3" >
-		    	<table width="987px" cellspacing="0" cellpadding="0" >
+		    	<table width="1087px" cellspacing="0" cellpadding="0" >
 		      <tr>
-		        <td width="148px"  style="border-bottom:1pt solid black;border-top:1pt solid black;text-align:right;" >Cantidad</td>
-		        <td width="395px"  style="border-bottom:1pt solid black;border-top:1pt solid black;text-align:center;" >Descripci&oacute;n</td>
-		        <td width="148px"  style="border-bottom:1pt solid black;border-top:1pt solid black;text-align:right;" >Precio/Unidad</td>
-		        <td width="148px"  style="border-bottom:1pt solid black;border-top:1pt solid black;text-align:right;" >Precio/Oferta</td>
-		        <td width="148px"  style="border-bottom:1pt solid black;border-top:1pt solid black;text-align:right;" >Total</td>
+		        <td width="40px"  style="border-bottom:1pt solid black;border-top:1pt solid black;text-align:right;" >Nro. Linea</td>
+		        <td width="10px"  style="border-bottom:1pt solid black;border-top:1pt solid black;text-align:right;" >&nbsp;</td>
+		        <td width="695px"  style="border-bottom:1pt solid black;border-top:1pt solid black;text-align:center;" >Descripci&oacute;n</td>
+		        <td width="128px"  style="border-bottom:1pt solid black;border-top:1pt solid black;text-align:right;" >Cantidad</td>
+		        <td width="128px"  style="border-bottom:1pt solid black;border-top:1pt solid black;text-align:right;" >Precio</td>
+		        <td width="128px"  style="border-bottom:1pt solid black;border-top:1pt solid black;text-align:right;" >Total</td>
 		      </tr>';
 		$descripciones = '';
 		$i = 0;
+		$linea = 0;
+		$neto=0;
 		foreach($items->result() as $v){
 			//$i = 0;
 			//while($i < 30){
@@ -708,21 +720,27 @@ class Cotizaciones extends CI_Controller {
 			$producto = $this->db->get("productos");	
 			$producto = $producto->result();
 			$producto = $producto[0];
-			$totaliva = 
-
+			$linea= $linea +1;
+			$subtotal = (($v->neto - $v->descuento) / ($v->cantidad));
+			
+			$neto = $neto + ($v->neto - $v->descuento);
+			$iva = (($neto * 19)/100);
+			//$total = $total + (($v->neto - $v->descuento) + $iva);
+			
 			$html .= '<tr>
+			<td style="text-align:right">'.$linea.'</td>	
+			<td style="text-align:right">&nbsp;&nbsp;</td>			
+			<td style="text-align:left">'.$producto->nombre.'</td>
 			<td style="text-align:right">'.number_format($v->cantidad,0,'.',',').'&nbsp;&nbsp;</td>			
-			<td style="text-align:left">'.$producto->nombre.'</td>			
-			<td align="right">$ '.number_format($v->subtotal, 0, '.', ',').'</td>
-			<td align="right">$ '.number_format($v->subtotal - ($v->descuento/$v->cantidad), 0, '.', ',').'</td>
-
+			<td align="right">$ '.number_format($v->total / $v->cantidad, 2, '.', ',').'</td>
 			<td align="right">$ '.number_format($v->total, 0, '.', ',').'</td>
 			</tr>';
+			
+					
 			
 			//}
 			$i++;
 		}
-
 		// RELLENA ESPACIO
 		while($i < 30){
 			$html .= '<tr><td colspan="5">&nbsp;</td></tr>';
@@ -793,11 +811,10 @@ class Cotizaciones extends CI_Controller {
 		</body>
 		</html>
 		';
+		//==============================================================
+		//==============================================================
+		//==============================================================
 
-		//==============================================================
-		//==============================================================
-		//==============================================================
-        //$html = $header.$header2.$body_data; 
 		$this->load->library("mpdf");
 
 			//include(defined('BASEPATH')."/libraries/MPDF54/mpdf.php");
@@ -823,10 +840,8 @@ class Cotizaciones extends CI_Controller {
 			$file = date("YmdHis").".pdf";
 			$this->mpdf->Output('./tmp/'.$file, 'F');
 
-
 			$this->load->model('facturaelectronica');
 			$email_data = $this->facturaelectronica->get_email();
-
 			if(count($email_data) > 0){
 				$this->load->library('email');
 				$config['protocol']    = $email_data->tserver_intercambio;
@@ -846,7 +861,7 @@ class Cotizaciones extends CI_Controller {
 			    $this->email->to($email);
 
 			    //$this->email->bcc(array('rodrigo.gonzalez@info-sys.cl','cesar.moraga@info-sys.cl','sergio.arriagada@info-sys.cl','rene.gonzalez@info-sys.cl')); 
-			    $this->email->subject('Envio de Cotizacion');
+			    $this->email->subject('Envio Cotizacion');
 			    $this->email->message($mensaje);
 
 			    $this->email->attach('./tmp/'.$file,'attachment', 'Cotizacion.pdf');			
@@ -866,7 +881,9 @@ class Cotizaciones extends CI_Controller {
 
 			    }
 		    }
-		    
+
+
+
 		exit;
 	}
 }
