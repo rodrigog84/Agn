@@ -882,11 +882,17 @@ Ext.define('Infosys_web.controller.Notacredito', {
         var numfactura = view.down('#numfactId').getValue();
         var precio = ((view.down('#precioId').getValue()));
         var precioun = ((view.down('#precioId').getValue())/ 1.19);        
-        var neto = ((cantidad * precio));
+       /* var neto = ((cantidad * precio));
         var total = ((neto * 1.19));
         var exists = 0;
         var iva = (total - neto );
-        var totaliva = (total);
+        var totaliva = (total);*/
+
+        var total = ((cantidad * precio));
+        var neto = (Math.round(total / 1.19));
+        var exists = 0;
+        var iva = (total - neto );
+        var totaliva = (total);        
        
         var totalfin = view.down('#finaltotalpostId').getValue();
         var netofin = view.down('#finalafectoId').getValue();
@@ -1592,7 +1598,6 @@ Ext.define('Infosys_web.controller.Notacredito', {
                 },
                 success: function(response){
                    var resp = Ext.JSON.decode(response.responseText);                
-
                    if(resp.cliente){
                       var cliente = resp.cliente;
                       var canti = cliente.cantidad;
