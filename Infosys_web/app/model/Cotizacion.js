@@ -14,9 +14,11 @@ Ext.define('Infosys_web.model.Cotizacion', {
         {name: 'totaliva'},
         {name: 'iva'},
         {name: 'dcto'},
+        {name: 'descuento'},
     	{name: 'descripcion'},
     	{name: 'requisitos'},
     	{name: 'cantidad'},
+        {name: 'email_contacto'},
         {name: 'descuentoprct'},
         {name: 'img'}
     ]
