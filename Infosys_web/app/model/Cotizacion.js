@@ -6,6 +6,7 @@ Ext.define('Infosys_web.model.Cotizacion', {
         {name: 'id_producto'},
         {name: 'id_descuento'},
         {name: 'nombre'},
+        {name: 'num_cotiza'},
     	{name: 'codigo'},
     	{name: 'precio_base'},
         {name: 'total'},
