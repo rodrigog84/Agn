@@ -202,7 +202,7 @@ class Facturaelectronica extends CI_Model
 						);
 
 		$this->db->insert('log_libros',$array_insert); 
-		return true;
+		return $this->db->insert_id();
 	}
 
 
@@ -791,7 +791,7 @@ class Facturaelectronica extends CI_Model
 		    \sasco\LibreDTE\Sii::PRODUCCION
 		);
 
-		
+
 		$tabla_contribuyentes = $this->busca_parametro_fe('tabla_contribuyentes');
 		$tabla_inserta = $tabla_contribuyentes == 'contribuyentes_autorizados_1' ? 'contribuyentes_autorizados_2' : 'contribuyentes_autorizados_1';
 
