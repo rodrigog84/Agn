@@ -349,6 +349,7 @@ public function show_dte($idfactura){
 		    'NroResol' => $empresa->nro_resolucion,
 		    'TipoOperacion' => $tipo_libro,
 		    'TipoLibro' => 'MENSUAL',
+		    //'TipoEnvio' => 'AJUSTE',
 		    'TipoEnvio' => 'TOTAL',
 		    //'FolioNotificacion' => 102006,
 		];
@@ -386,6 +387,20 @@ public function show_dte($idfactura){
 		echo json_encode($result);
 
 	}
+
+
+	public function put_trackid_libro(){
+		$trackid = $this->input->post('trackid');
+		$idlibro = $this->input->post('idlibro');
+		$this->load->model('facturaelectronica');
+		$this->facturaelectronica->put_trackid_libro($idlibro,$trackid);
+
+		$result['success'] = true;
+		$result['message'] = "Identificador de Envío actualizado correctamente";
+		echo json_encode($result);		
+
+	}
+
 
 	public function prueba_email($tipo_email){
 
