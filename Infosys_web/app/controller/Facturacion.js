@@ -30,6 +30,7 @@ Ext.define('Infosys_web.controller.Facturacion', {
              'ventas.Principalfactura',
              'ventas.BuscarSucursales',
              'ventas.Exportar',
+             'ventas.ResumenVentas',
              'ventas.Observaciones',
              'ventas.Facturaseditar',
              'notacredito.Principal',
@@ -113,7 +114,12 @@ Ext.define('Infosys_web.controller.Facturacion', {
     },{
         ref: 'emails',
         selector: 'emails'
+    },{
+        ref: 'resumenventas',
+        selector: 'resumenventas'
     }
+    
+
     
     ],
     //init es lo primero que se ejecuta en el controller
@@ -125,6 +131,13 @@ Ext.define('Infosys_web.controller.Facturacion', {
 
             'facturasingresar #rutId': {
                 specialkey: this.special
+            },
+             'topmenus menuitem[action=resumenventas]': {
+                click: this.resumenventas
+            },
+
+            'resumenventas button[action=cerrarfactura]': {
+                click: this.cerrarfactura
             },
 
             'facturasprincipal button[action=mfactura]': {
@@ -319,6 +332,14 @@ Ext.define('Infosys_web.controller.Facturacion', {
 
         });
     },
+
+     resumenventas: function(){
+//
+        var viewport = this.getPanelprincipal();
+        viewport.removeAll();
+        viewport.add({xtype: 'resumenventas'});
+        
+    },  
 
 
     changedctofinal: function(){
