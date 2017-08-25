@@ -355,7 +355,11 @@ public function show_dte($idfactura){
 		];
 
 
-		$LibroCompraVenta->agregarVentasCSV('./facturacion_electronica/tmp/' . $nombre_archivo_csv);
+		if($tipo_libro == 'VENTA'){
+			$LibroCompraVenta->agregarVentasCSV('./facturacion_electronica/tmp/' . $nombre_archivo_csv);
+		}else{
+			$LibroCompraVenta->agregarComprasCSV('./facturacion_electronica/tmp/' . $nombre_archivo_csv);
+		}
 
 		// enviar libro de compras y mostrar resultado del envío: track id o bien =false si hubo error
 		$LibroCompraVenta->setCaratula($caratula);
