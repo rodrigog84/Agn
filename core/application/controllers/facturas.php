@@ -2780,14 +2780,15 @@ public function cargacontribuyentes(){
 
 		$this->db->insert('cartola_cuenta_corriente', $cartola_cuenta_corriente); 			
 
-        $resp['success'] = true;
-		$resp['idfactura'] = $idfactura;
+
 
 		$this->Bitacora->logger("I", 'factura_clientes', $idfactura);
 		}		
 
 		/*****************************************/
-
+        $resp['success'] = true;
+		$resp['idfactura'] = $idfactura;
+		
 		if($tipodocumento == 101 || $tipodocumento == 103 || $tipodocumento == 105){  // SI ES FACTURA ELECTRONICA O FACTURA EXENTA ELECTRONICA
 
 
@@ -2810,6 +2811,7 @@ public function cargacontribuyentes(){
 
 			$empresa = $this->facturaelectronica->get_empresa();
 			$datos_empresa_factura = $this->facturaelectronica->get_empresa_factura($idfactura);
+			$datos_factura = $this->facturaelectronica->get_factura($idfactura);
 
 			$detalle_factura = $this->facturaelectronica->get_detalle_factura($idfactura);
 
@@ -2826,8 +2828,8 @@ public function cargacontribuyentes(){
 				//$neto = round($total/1.19,2);
 
 				//$lista_detalle[$i]['PrcItem'] = round($neto/$detalle->cantidad,2);
-				$lista_detalle[$i]['PrcItem'] = $tipo_caf == 33 ? floor(($detalle->totalproducto - $detalle->iva)/$detalle->cantidad) : floor($detalle->precio);
-				if($tipo_caf == 33){
+				$lista_detalle[$i]['PrcItem'] = $tipo_caf == 33 || $tipo_caf == 52  ? floor(($detalle->totalproducto - $detalle->iva)/$detalle->cantidad) : floor($detalle->precio);
+				if($tipo_caf == 33 || $tipo_caf == 52 ){
 					$lista_detalle[$i]['MontoItem'] = ($detalle->totalproducto - $detalle->iva);
 				}
 				if($detalle->descuento != 0){
@@ -2867,6 +2869,13 @@ public function cargacontribuyentes(){
 			            'DirRecep' => substr($dir_cliente,0,70), //LARGO DE DIRECCION NO PUEDE SER SUPERIOR A 70 CARACTERES
 			            'CmnaRecep' => substr($datos_empresa_factura->nombre_comuna,0,20), //LARGO DE COMUNA NO PUEDE SER SUPERIOR A 20 CARACTERES
 			        ],
+			        'Totales' => [
+		                // estos valores serán calculados automáticamente
+		                'MntNeto' => isset($datos_factura->neto) ? $datos_factura->neto : 0,
+		                'TasaIVA' => \sasco\LibreDTE\Sii::getIVA(),
+		                'IVA' => isset($datos_factura->iva) ? $datos_factura->iva : 0,
+		                'MntTotal' => isset($datos_factura->totalfactura) ? $datos_factura->totalfactura : 0,
+		            ],	
 			    ],
 				'Detalle' => $lista_detalle
 			];

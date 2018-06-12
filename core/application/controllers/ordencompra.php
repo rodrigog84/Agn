@@ -149,29 +149,29 @@ class Ordencompra extends CI_Controller {
 		foreach($data as $v){
 
 		   $producto = $v->id_producto;
-
+		   $puc = ($v->precio / 1.19);
+		   $cero=0;
+		
 		   $query = $this->db->query('SELECT * FROM productos WHERE id="'.$producto.'"');
 		   if($query->num_rows()>0){
-
-			 	$row = $query->first_row();
-
+			 $row = $query->first_row();
+			 $query2 = $this->db->query('SELECT * FROM existencia_detalle WHERE id_producto='.$producto.' and cantidad_entrada > '.$cero.'');	    	 
+	    	 $ppm=0;
+	    	 $cal = 1;
+			 if ($query2->num_rows()>0){
+			 	foreach ($query2->result() as $r){			 	
+				 	$ppm = $ppm + ($r->valor_producto);
+				 	$cal = $cal +1;
+			    };
+			    $ppm = $ppm + $puc;
+                $ppm = ($ppm / $cal);
 			 	$saldo = ($row->stock)+($v->stock);
-			 	$ppm = ($row->p_promedio);
 			 	$pmc = ($row->p_may_compra);
-			 	$pco = ($row->p_costo);
-			 	
-
+			 	if ($pmc < $puc){			 		
+			 		$pmc = $puc;
+			 	};			 
+			};                
 		   };
-	         $puc = ($v->valor);
-	         if ($pmc < $v->valor){
-	         	
-	         	$pmc = ($v->valor);
-
-	         };
-
-             $ppm = (($pco+$puc)/2);
-
-
 		   $prod = array(
 	         'stock' => $saldo,
 	         'p_ult_compra' => $puc,
@@ -187,11 +187,11 @@ class Ordencompra extends CI_Controller {
 	    	///GRABAR EXISTENCIA DETALL
 
 	    	$datos2 = array(
-
 				'num_movimiento' => $numdoc,
 		        'id_producto' => $v->id_producto,
 		        'id_tipo_movimiento' => $tipdoc,
 		        'valor_producto' =>  $v->valor,
+		        'p_promedio' =>  $ppm,
 		        'cantidad_entrada' => $v->cantidad,
 		        'fecha_movimiento' => $fecha
 			);
@@ -239,7 +239,7 @@ class Ordencompra extends CI_Controller {
 
 	    		$data4 = array(
 		        'cant_final' => $v->stock,
-		        'valor_prom' => $v->valor,
+		        'valor_prom' => $ppm,
 		        'id_bodega' => $idbodega
 		    	);
 
@@ -270,15 +270,15 @@ class Ordencompra extends CI_Controller {
 	    	$orden_compra_item = array(
 		        'id_producto' => $v->id_producto,
 		        'id_ordencompra' => $id,
-		        'subtotal' => $v->precio_base,
-		        'cantidad' => $cantidad,
-		        'total' => $total,
+		        'subtotal' => $v->precio,
+		        'cantidad' => $v->cantidad,
+		        'total' => $v->total,
 		        'descuento' => $v->dcto,
-		        'id_bodega' => $idbodega,
-		        'afecto' => $neto,
-		        'total' => $total,
-		        'neto' => $neto,
-		        'iva' => $iva
+		        'afecto' => $v->neto,
+		        'total' => $v->total,
+		        'neto' => $v->neto,
+		        'iva' => $v->iva,
+		        'valor_prom' => $v->precio
 			);
 
 
@@ -348,23 +348,29 @@ class Ordencompra extends CI_Controller {
 
 		   $producto = $v->id_producto;
 
+		   $puc = ($v->valor_prom / 1.19);
+		   $cero=0;
+
 		   $query = $this->db->query('SELECT * FROM productos WHERE id="'.$producto.'"');
 		   if($query->num_rows()>0){
-
-			 	$row = $query->first_row();
+			 $row = $query->first_row();
+			 $query2 = $this->db->query('SELECT * FROM existencia_detalle WHERE id_producto='.$producto.' and cantidad_entrada > '.$cero.'');	    	 
+	    	 $ppm=0;
+	    	 $cal = 1;
+			 if ($query2->num_rows()>0){
+			 	foreach ($query2->result() as $r){			 	
+				 	$ppm = $ppm + ($r->valor_producto);
+				 	$cal = $cal +1;
+			    };
+			    $ppm = $ppm + $puc;
+                $ppm = ($ppm / $cal);
 			 	$saldo = ($row->stock)+($v->stock);
-			 	$ppm = ($row->p_promedio);
 			 	$pmc = ($row->p_may_compra);
-			 	$pco = ($row->p_costo);
-			};
-	         $puc = ($v->valor);
-	         if ($pmc < $v->valor){
-	         	
-	         	$pmc = ($v->valor);
-
-	         };
-
-             $ppm = (($pco+$puc)/2);
+			 	if ($pmc < $puc){			 		
+			 		$pmc = $puc;
+			 	};			 
+			};                
+		   };
 
 
 		   $prod = array(
@@ -387,7 +393,8 @@ class Ordencompra extends CI_Controller {
 		        'id_tipo_movimiento' => $tipdoc,
 		        'valor_producto' =>  $v->valor,
 		        'cantidad_entrada' => $v->stock,
-		        'fecha_movimiento' => $fecha
+		        'fecha_movimiento' => $fecha,
+		        'p_promedio' => $ppm
 			);
 
 			$this->db->insert('existencia_detalle', $datos2);
@@ -516,6 +523,7 @@ class Ordencompra extends CI_Controller {
 	   	}
 
         $resp['success'] = true;
+        $resp['ppm'] = $ppm;
 
         $this->Bitacora->logger("M", 'orden_compra', $id);
         $this->Bitacora->logger("M", 'orden_compra_item', $id);

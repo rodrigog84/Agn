@@ -4,6 +4,7 @@ Ext.define('Infosys_web.controller.Ordencompra', {
     stores: ['Orden_compra',
              'Orden_compratodas',
              'Proveedores',
+             'Productosf',
              'ordencompra.Items',
               'Recepcion', 'Orden_compradetalle', 
               'Ordencomprarecepcion',
@@ -14,35 +15,34 @@ Ext.define('Infosys_web.controller.Ordencompra', {
               'ordencompra.Selector',
               'Tipo_documento.Selector3',
               'Ordeneditar',
-              'Tabladescuento',
-              'clientes.Clientes'],
+              'Tabladescuento'],
 
     models: ['Orden_compra', 'ordencompra.Item'],
 
     views: [
         'ordencompra.Ingresar',
         'ordencompra.Recepcionforzada',
-        'ordencompra.BusquedaProveedor2',
+        'ordencompra.BusquedaProveedor',
         'ordencompra.Principal',
         'ordencompra.Principaltodas',
         'ordencompra.Principal_recepcion',
         'ordencompra.Principal_forzada',
+        'TopMenus',
         'ordencompra.BuscarProductos',
         'ordencompra.Buscarcontactos',
         'ordencompra.Exportar1',
         'ordencompra.Exportar2',
         'ordencompra.Editar',
         'ordencompra.BuscarProductos2',
-        'ordencompra.OrdencompraMail',
-        'ordencompra.IngresarProveedor2'
+        'ordencompra.OrdencompraMail'
     ],
 
     refs: [{
         ref: 'ordencompraingresar',
         selector: 'ordencompraingresar'
     },{
-        ref: 'busquedaproveedor2',
-        selector: 'busquedaproveedor2'
+        ref: 'busquedaproveedor',
+        selector: 'busquedaproveedor'
     },{
         ref: 'topmenus',
         selector: 'topmenus'
@@ -97,11 +97,7 @@ Ext.define('Infosys_web.controller.Ordencompra', {
     },{
         ref: 'formularioexportarordencompra3',
         selector: 'formularioexportarordencompra3'
-    },{
-        ref: 'proveedoringresarorden',
-        selector: 'proveedoringresarorden'
     }
-
        
     ],
 
@@ -111,14 +107,13 @@ Ext.define('Infosys_web.controller.Ordencompra', {
         	'ordencompraingresar button[action=grabar]': {
         		click: this.grabar
         	},
-            'ordencompraingresar button[action=wbuscarproveedor2]': {
-                click: this.wbuscarproveedor2
+            'ordencompraingresar button[action=wbuscarproveedor]': {
+                click: this.wbuscarproveedor
             },
-            'busquedaproveedor2 button[action=buscarproveedor2]': {
-                click: this.buscarproveedor2
-
+            'busquedaproveedor button[action=buscarproveedor]': {
+                click: this.buscarproveedor
             },
-            'busquedaproveedor2 button[action=seleccionarproveedor]': {
+            'busquedaproveedor button[action=seleccionarproveedor]': {
                 click: this.seleccionarproveedor
             },
             'ordencompraingresar button[action=agregarItem]': {
@@ -136,8 +131,8 @@ Ext.define('Infosys_web.controller.Ordencompra', {
             'ordencompraingresar #finaldescuentoId': {
                 change: this.changedctofinal
             },
-            'ordencompraingresar button[action=buscarproductos]': {
-                click: this.buscarproductos
+            'ordencompraingresar button[action=buscarproductosl]': {
+                click: this.buscarproductosl
             },
             'ordencompraingresar #codigoId': {
                 specialkey: this.special3
@@ -238,10 +233,10 @@ Ext.define('Infosys_web.controller.Ordencompra', {
             'buscarproductos #nombreId': {
                 specialkey: this.special2
             },
-            'busquedaproveedor2 #bproveedornombreId': {
+            'busquedaproveedor #bproveedornombreId': {
                 specialkey: this.special4
             },
-            'busquedaproveedor2 #bproveedorrutId': {
+            'busquedaproveedor #bproveedorrutId': {
                 specialkey: this.special4
             },
             'ordencompraeditar button[action=grabareditar]': {
@@ -279,57 +274,9 @@ Ext.define('Infosys_web.controller.Ordencompra', {
             },
              'ordencompramail button[action=ordencompraemail]': {
                 click: this.ordencompraemail
-            },
-            'proveedoringresarorden button[action=grabarproveedororden2]': {
-                click: this.grabarproveedororden2
             }
 
         });
-    },
-
-    grabarproveedororden2: function(){
-
-        var view = this.getProveedoringresarorden();
-        var rut = view.down('#rutId').getValue();
-        var nombre = view.down('#nombre_id').getValue();
-        var idcliente = view.down('#id_proveedor').getValue();
-        var direccion = view.down('#direccionId').getValue();
-        var ciudad = view.down('#tipoCiudadId').getValue();
-        var comuna = view.down('#tipoComunaId').getValue();
-        var giro = view.down('#giroId').getValue();
-        var fono = view.down('#fonoId').getValue();
-        var mail = view.down('#e_mailId').getValue();
-        var fechaincorporacion = view.down('#fecha_incripcionId').getValue();
-        var fechaactualiza = view.down('#fecha_ult_actualizId').getValue();
-        var estado = view.down('#tipoEstadoId').getValue();
-        var tipocliente = view.down('#tipoId').getValue();
-        var st = this.getProveedoresStore();
-
-         Ext.Ajax.request({
-            url: preurl + 'proveedores/update',
-            params: {
-                rut: rut,
-                nombre: nombre,
-                idcliente: idcliente,
-                direccion: direccion,
-                ciudad: ciudad,
-                comuna: comuna,
-                giro : giro,
-                fono : fono,
-                mail : mail,
-                fechaincorporacion : fechaincorporacion,
-                fechaactualiza : fechaactualiza,
-                estado : estado,
-                tipocliente : tipocliente
-            },
-             success: function(response){
-                view.close();
-                st.load();
-
-            }
-           
-        });
-
     },
 
     ordencompraemail : function(){
@@ -398,12 +345,12 @@ Ext.define('Infosys_web.controller.Ordencompra', {
         var dcto = view.down('#finaldescuentoId').getValue();
 
         stItem.each(function(r){
-            pretotal = ((pretotal) + (r.data.total))
-            iva = ((iva) + (r.data.iva))
-            neto = ((neto) + (r.data.neto))
+            pretotal = (parseInt(pretotal) + parseInt(r.data.total))
+            iva = (parseInt(iva) + parseInt(r.data.iva))
+            neto = (parseInt(neto) + parseInt(r.data.neto))
         });
         pretotalfinal = ((pretotal * dcto)  / 100);
-        total = ((pretotal) - (pretotalfinal));
+        total = ((pretotal) - parseInt(pretotalfinal));
         afecto = neto;
         
         //iva = (total - afecto);
@@ -427,21 +374,17 @@ Ext.define('Infosys_web.controller.Ordencompra', {
         var record = stCombo.findRecord('id', descuento.getValue()).data;
         var dcto = (record.porcentaje);
        
-        afecto = (total / 1.19);
-        descuentopesos = ((neto * dcto) / 100);
-        afecto = neto - descuentopesos;
-        pretotal = (((afecto * 19) / 100) + afecto);
-        iva = (pretotal - afecto);
-        afecto = afecto;
-        neto = neto;
-        pretotalfinal = afecto + iva;
+        pretotalfinal = ((total * dcto)  / 100);
+        total = ((total) - parseInt(pretotalfinal));
+        afecto = (parseInt(total / 1.19));
+        iva = (total - afecto);
 
-        view.down('#finaltotalId').setValue(Ext.util.Format.number(pretotalfinal, '0,000'));
-        view.down('#finaltotalpostId').setValue(Ext.util.Format.number(pretotalfinal, '0'));
+        view.down('#finaltotalId').setValue(Ext.util.Format.number(total, '0,000'));
+        view.down('#finaltotalpostId').setValue(Ext.util.Format.number(total, '0'));
         view.down('#finaltotalnetoId').setValue(Ext.util.Format.number(neto, '0'));
         view.down('#finaltotalivaId').setValue(Ext.util.Format.number(iva, '0'));
         view.down('#finalafectoId').setValue(Ext.util.Format.number(afecto, '0'));
-        view.down('#descuentovalorId').setValue(Ext.util.Format.number(descuentopesos, '0'));
+        view.down('#descuentovalorId').setValue(Ext.util.Format.number(pretotalfinal, '0'));
     },
 
     changedctofinal: function(){
@@ -467,7 +410,7 @@ Ext.define('Infosys_web.controller.Ordencompra', {
         var stCombo = descuento.getStore();
         var record = stCombo.findRecord('id', descuento.getValue()).data;
         var dcto = (record.porcentaje);
-        totaldescuento = (((total * dcto)  / 100));
+        totaldescuento = ((parseInt(total * dcto)  / 100));
         view.down('#totdescuentoId').setValue(totaldescuento);
         };      
     },
@@ -484,7 +427,7 @@ Ext.define('Infosys_web.controller.Ordencompra', {
         var stCombo = descuento.getStore();
         var record = stCombo.findRecord('id', descuento.getValue()).data;
         var dcto = (record.porcentaje);
-        totaldescuento = (((total * dcto)  / 100));
+        totaldescuento = ((parseInt(total * dcto)  / 100));
         view.down('#totdescuentoId').setValue(totaldescuento);
         };      
     },
@@ -533,13 +476,12 @@ Ext.define('Infosys_web.controller.Ordencompra', {
             var iddescuento = 0;
         };
               
-              
         var neto = ((cantidad * precio) - descuento);
-        var tot = (Math.round(neto * 1.19));
+        var tot = ((cantidad * precio) - descuento);
+        var neto = (parseInt(neto / 1.19));
         var exists = 0;
         var iva = (tot - neto );
         var total = ((neto + iva ));
-        
         
         if(!producto){
             
@@ -844,7 +786,7 @@ Ext.define('Infosys_web.controller.Ordencompra', {
                     view.down('#finaltotalivaId').setValue(Ext.util.Format.number(iva, '0'));
                     view.down('#finalafectoId').setValue(Ext.util.Format.number(neto, '0'));
                     view.down('#descuentovalorId').setValue(Ext.util.Format.number(cliente.desc, '0'));
-                    view.down('#observacionesId').setValue(cliente.observaciones);
+                    //view.down('#observacionesId').setValue(cliente.observaciones);
                                                        
                 }
             }
@@ -856,9 +798,22 @@ Ext.define('Infosys_web.controller.Ordencompra', {
         }       
     },
 
+     buscarproductosl: function(){
+
+        var st = this.getProductosfStore()
+        st.load();
+        var view = Ext.create('Infosys_web.view.ordencompra.BuscarProductos').show();
+        view.down("#nombreId").focus();
+
+
+    },
+
 
     buscarproductos: function(){
 
+
+        var st = this.getProductosfStore()
+        st.load();
         var view = Ext.create('Infosys_web.view.ordencompra.BuscarProductos2').show();
         view.down("#nombreId").focus();
 
@@ -885,7 +840,7 @@ Ext.define('Infosys_web.controller.Ordencompra', {
 
     special4 : function(f,e){
         if (e.getKey() == e.ENTER) {
-            this.buscarproveedor2()
+            this.buscarproveedor()
         }
     },
 
@@ -1486,6 +1441,8 @@ Ext.define('Infosys_web.controller.Ordencompra', {
                 var st = this.getOrden_compradetallerecStore()
                 st.proxy.extraParams = {nombre : nombre}
                 st.load();
+           
+
             };
            
             
@@ -1496,9 +1453,9 @@ Ext.define('Infosys_web.controller.Ordencompra', {
         
     },
 
-    //changedctofinal: function(){
-       // this.recalcularFinal();
-    //},
+    changedctofinal: function(){
+        this.recalcularFinal();
+    },
 
     recalcularFinal: function(){
 
@@ -1511,23 +1468,20 @@ Ext.define('Infosys_web.controller.Ordencompra', {
         var dcto = view.down('#descuentovalorId').getValue();
 
        stItem.each(function(r){
-            pretotal = pretotal + (parseInt(r.data.total))
-            //iva = iva + r.data.iva
-            //neto = neto + r.data.neto
+            pretotal = pretotal + r.data.total
+            iva = iva + r.data.iva
+            neto = neto + r.data.neto
         });
-        neto = (Math.round(pretotal /1.19));
-        iva = ((pretotal - neto));
+        pretotalfinal = ((pretotal * dcto)  / 100);
+        total = ((pretotal) - parseInt(pretotalfinal));
         afecto = neto;
-        neto = neto;
-        pretotalfinal = pretotal;
         
-        //iva = (total - afecto);
-        view.down('#finaltotalId').setValue(Ext.util.Format.number(pretotalfinal, '0,000'));
-        view.down('#finaltotalpostId').setValue(Ext.util.Format.number(pretotalfinal, '0'));
+        view.down('#finaltotalId').setValue(Ext.util.Format.number(total, '0,000'));
+        view.down('#finaltotalpostId').setValue(Ext.util.Format.number(total, '0'));
         view.down('#finaltotalnetoId').setValue(Ext.util.Format.number(neto, '0'));
         view.down('#finaltotalivaId').setValue(Ext.util.Format.number(iva, '0'));
         view.down('#finalafectoId').setValue(Ext.util.Format.number(afecto, '0'));
-        view.down('#finalafectoId').setValue(Ext.util.Format.number(neto, '0'));  
+        view.down('#descuentovalorId').setValue(Ext.util.Format.number(pretotalfinal, '0'));  
           
     },
 
@@ -1543,22 +1497,19 @@ Ext.define('Infosys_web.controller.Ordencompra', {
 
         stItem.each(function(r){
             pretotal = pretotal + r.data.total
-            //iva = iva + r.data.iva
-            //neto = neto + r.data.neto
+            iva = iva + r.data.iva
+            neto = neto + r.data.neto
         });
-        neto = (Math.round(pretotal /1.19));
-        iva = ((pretotal - neto));
+        pretotalfinal = ((pretotal * dcto)  / 100);
+        total = ((pretotal) - parseInt(pretotalfinal));
         afecto = neto;
-        neto = neto;
-        pretotalfinal = pretotal;
         
-        //iva = (total - afecto);
-        view.down('#finaltotalId').setValue(Ext.util.Format.number(pretotalfinal, '0,000'));
-        view.down('#finaltotalpostId').setValue(Ext.util.Format.number(pretotalfinal, '0'));
+        view.down('#finaltotalId').setValue(Ext.util.Format.number(total, '0,000'));
+        view.down('#finaltotalpostId').setValue(Ext.util.Format.number(total, '0'));
         view.down('#finaltotalnetoId').setValue(Ext.util.Format.number(neto, '0'));
         view.down('#finaltotalivaId').setValue(Ext.util.Format.number(iva, '0'));
         view.down('#finalafectoId').setValue(Ext.util.Format.number(afecto, '0'));
-        view.down('#finalafectoId').setValue(Ext.util.Format.number(neto, '0'));  
+        view.down('#descuentovalorId').setValue(Ext.util.Format.number(pretotalfinal, '0'));  
           
     },
 
@@ -1678,11 +1629,12 @@ Ext.define('Infosys_web.controller.Ordencompra', {
         };
               
         var neto = ((cantidad * precio) - descuento);
-        var tot = (Math.round(neto * 1.19));
+        var tot = ((cantidad * precio) - descuento);
+        var neto = (parseInt(neto / 1.19));
         var exists = 0;
         var iva = (tot - neto );
         var total = ((neto + iva ));
-        
+
         
         if(!producto){
             
@@ -1722,7 +1674,7 @@ Ext.define('Infosys_web.controller.Ordencompra', {
         });
         if(exists == 1)
             return;
-     
+        
         stItem.add(new Infosys_web.model.ordencompra.Item({
             id: producto,
             id_producto: producto,
@@ -1750,7 +1702,7 @@ Ext.define('Infosys_web.controller.Ordencompra', {
     seleccionarproveedor: function() {
 
         var viewIngresa = this.getOrdencompraingresar();
-        var view = this.getBusquedaproveedor2();
+        var view = this.getBusquedaproveedor();
         var grid  = view.down('grid');
         if (grid.getSelectionModel().hasSelection()) {
             var row = grid.getSelectionModel().getSelection()[0];
@@ -1771,105 +1723,28 @@ Ext.define('Infosys_web.controller.Ordencompra', {
         }
     },
 
-    buscarproveedor2: function() {
-
-        var view = this.getBusquedaproveedor2();
+    buscarproveedor: function() {
+        var view = this.getBusquedaproveedor();
         var st = this.getProveedoresStore()
         var nombre = view.down('#bproveedornombreId').getValue();
         var rut = view.down('#bproveedorrutId').getValue();
-        var numero = rut.length;
-        var cero = "";
-
-        if (!rut){
-
-        if(numero>9){            
-            Ext.Msg.alert('Rut Erroneo Ingrese Sin Puntos');
-            return;            
-        }else{
-            if(numero>13){
-            Ext.Msg.alert('Rut Erroneo Ingrese Sin Puntos');
-            return;   
-            }
+        if (nombre==""){            
+            var opcion = "Rut";
+            var nombre = view.down('#bproveedorrutId').getValue();
         };
 
-        Ext.Ajax.request({
-            url: preurl + 'clientes/validaRut?valida='+rut,
-            params: {
-                id: 1
-            },
-            success: function(response){
-                 var resp = Ext.JSON.decode(response.responseText); 
-                 var cliente = resp.cliente;
-                 if (resp.success == true) {                    
-                    if(resp.cliente){
-                        if (cliente.tipo == 1 || cliente.tipo == 0){
-                        var viewedit= Ext.create('Infosys_web.view.ordencompra.IngresarProveedor2')                        
-                        viewedit.down("#rutId").setValue(cliente.rut)
-                        viewedit.down("#rutgrabaId").setValue(cliente.rut)
-                        viewedit.down("#id_proveedor").setValue(cliente.id)
-                        viewedit.down("#nombre_id").setValue(cliente.nombres)
-                        viewedit.down("#direccionId").setValue(cliente.direccion)
-                        viewedit.down("#giroId").setValue(cliente.id_giro)
-                        viewedit.down("#tipoCiudadId").setValue(cliente.id_ciudad)
-                        viewedit.down("#tipoComunaId").setValue(cliente.id_comuna)
-                        viewedit.down("#fonoId").setValue(cliente.fono)
-                        viewedit.down("#e_mailId").setValue(cliente.e_mail)
-                        viewedit.down("#tipoEstadoId").setValue(cliente.estado)
-                        viewedit.down("#tipoId").setValue(cliente.tipo)
-                        
-                        }else{                          
-
-                            if (nombre==""){            
-                                var opcion = "Rut";
-                                var nombre = view.down('#bproveedorrutId').getValue();
-                            };
-
-                            if (rut==""){            
-                                var opcion = "Nombre";
-                                var nombre = view.down('#bproveedornombreId').getValue();
-                            };
-                            st.proxy.extraParams = {nombre : nombre,
-                                                    opcion : opcion}
-                             st.load();
-                        };
-                           
-                    }else{
-                        var edit = Ext.create('Infosys_web.view.proveedores.Ingresar').show();                      
-                        edit.down("#rutId").setValue(rut);                         
-                    }
-                    
-                }else{
-                      Ext.Msg.alert('Informacion', 'Rut Incorrecto');
-                      view.down("#rutId").setValue(cero);
-                      return;
-                      
-                }
-
-              }
-                    
-              });
-          }else{
-
-            if (nombre==""){            
-                var opcion = "Rut";
-                var nombre = view.down('#bproveedorrutId').getValue();
-            };
-
-            if (rut==""){            
-                var opcion = "Nombre";
-                var nombre = view.down('#bproveedornombreId').getValue();
-            };
-            st.proxy.extraParams = {nombre : nombre,
-                                    opcion : opcion}
-             st.load();
-
-                  
-        }
+        if (rut==""){            
+            var opcion = "Nombre";
+            var nombre = view.down('#bproveedornombreId').getValue();
+        };
+        st.proxy.extraParams = {nombre : nombre,
+                                opcion : opcion}
+        st.load();
         
     },
 
-    wbuscarproveedor2: function() {
-        var view = Ext.create('Infosys_web.view.ordencompra.BusquedaProveedor2').show();
+    wbuscarproveedor: function() {
+        var view = Ext.create('Infosys_web.view.ordencompra.BusquedaProveedor').show();
         view.down("#bproveedornombreId").focus();
     },
 
@@ -1905,6 +1780,7 @@ Ext.define('Infosys_web.controller.Ordencompra', {
              Ext.Msg.alert('Debe Ingresar Productos');
              return;
         }
+
 
         Ext.Ajax.request({
             url: preurl + 'ordencompra/save',
