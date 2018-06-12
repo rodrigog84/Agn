@@ -2609,6 +2609,8 @@ public function cargacontribuyentes(){
 		$fechavenc = $this->input->post('fechavenc');
 		$vendedor = $this->input->post('vendedor');
 		$sucursal = $this->input->post('idsucursal');
+		$observaciones = $this->input->post('observacion');
+		$idobservaciones = $this->input->post('idobserva');
 		$datacliente = json_decode($this->input->post('datacliente'));
 		$items = json_decode($this->input->post('items'));
 		$neto = $this->input->post('netofactura');
@@ -2638,7 +2640,9 @@ public function cargacontribuyentes(){
 	        'iva' => $fiva,
 	        'totalfactura' => $ftotal,
 	        'fecha_factura' => $fechafactura,
-	        'fecha_venc' => $fechavenc
+	        'fecha_venc' => $fechavenc,
+	        'observacion' => $observaciones,
+	        'id_observa' => $idobservaciones
 	          
 		);
 
