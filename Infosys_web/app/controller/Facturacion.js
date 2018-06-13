@@ -824,63 +824,94 @@ cargar_listado_contribuyentes: function(){
     ingresaobs: function(){
 
         var view = this.getObservacionesfacturasdirectas();
-        var viewIngresar = this.getFacturasingresar();                
-        var rut = view.down('#rutmId').getValue();
-        var nombre = view.down('#nombreId').getValue();
-        var camion = view.down('#camionId').getValue();
-        var fono = view.down('#fonoId').getValue();
-        var carro = view.down('#carroId').getValue();
+        var viewIngresar = this.getFacturasingresar();   
+        var IDobserva = viewIngresar.down('#obsId').getValue();             
         var observa = view.down('#observaId').getValue();
         var valida = view.down('#validaId').getValue();
-        var numero = view.down('#FactId').getValue();      
+        var numero = view.down('#FactId').getValue();
         
-        var permite = "SI"
-
-        if (valida == "NO"){
-             Ext.Msg.alert('Alerta', 'Debe Validar Rut');
-                 return;
-        };        
+        if (!IDobserva){
         
-        if (!rut){
-             Ext.Msg.alert('Alerta', 'Debe Ingresar Rut');
-                 return;
-        };
-        if (!nombre){
-             Ext.Msg.alert('Alerta', 'Debe Ingresar Nombre');
-                 return;
-        };       
-       
+         
         Ext.Ajax.request({
-            url: preurl + 'facturasvizualiza/saveobserva',
+            url: preurl + 'facturas/saveobserva',
             params: {
-                rut: rut,
-                nombre: nombre,
-                camion: camion,
-                carro : carro,
-                fono : fono,
                 observa : observa,
                 numero: numero
             },
             success: function(response){
                 var resp = Ext.JSON.decode(response.responseText);
-                var idobserva = resp.idobserva;         
+                var idobserva = resp.idobserva;    
+                viewIngresar.down("#obsId").setValue(idobserva);
+                viewIngresar.down("#observaId").setValue(observa);     
                 view.close();
-                viewIngresar.down("#observaId").setValue(observa);
-                viewIngresar.down("#permiteId").setValue(permite);
-                viewIngresar.down("#obsId").setValue(idobserva);               
-
+                
             }
            
         });
+        }else{
+
+            Ext.Ajax.request({
+            url: preurl + 'facturas/updateobserva',
+            params: {
+                idobserva : IDobserva,
+                observa : observa,
+                numero: numero
+            },
+            success: function(response){
+                var resp = Ext.JSON.decode(response.responseText);
+                var idobserva = resp.idobserva;    
+                viewIngresar.down("#obsId").setValue(idobserva);
+                viewIngresar.down("#observaId").setValue(observa);     
+                view.close();
+                
+            }
+            
+        });
+    }
     },
 
     observaciones: function(){
 
         var viewIngresa = this.getFacturasingresar();
         var numfactura = viewIngresa.down('#numfacturaId').getValue();
-        var view = Ext.create('Infosys_web.view.ventas.Observaciones').show();
-        view.down("#rutId").focus();
-        view.down("#idfactura").setValue(numfactura);
+        var idobserva = viewIngresa.down('#obsId').getValue();
+        if(!numfactura){
+            Ext.Msg.alert('Alerta', 'Debe seleccionar Tipo de Documento');
+            return;    
+            
+        }else{
+
+            if (!idobserva){
+                var view = Ext.create('Infosys_web.view.ventas.Observaciones').show();
+                view.down("#FactId").setValue(numfactura);               
+
+            }else{
+
+                Ext.Ajax.request({
+            url: preurl + 'facturas/leeobserva',
+            params: {
+                idobserva : idobserva
+            },
+            success: function(response){
+                var resp = Ext.JSON.decode(response.responseText);
+                var observa = resp.observa;                
+                var view = Ext.create('Infosys_web.view.ventas.Observaciones').show();
+                view.down("#FactId").setValue(numfactura);  
+                view.down("#ObsId").setValue(observa.id);
+                view.down("#observaId").setValue(observa.observacion);     
+                //view.close();
+                
+            }
+            
+        });
+
+
+                
+            }
+        
+        
+        }
 
     },
 
@@ -1361,7 +1392,7 @@ cargar_listado_contribuyentes: function(){
                 var idfactura= resp.idfactura;
                  viewIngresa.close();
                  stFactura.load();
-                 window.open(preurl + 'facturas/exportPDF/?idfactura='+idfactura);
+                 //window.open(preurl + 'facturas/exportPDF/?idfactura='+idfactura);
                 
 
             }

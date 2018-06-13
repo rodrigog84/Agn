@@ -2598,6 +2598,76 @@ public function cargacontribuyentes(){
         echo json_encode($resp);
 	}
 
+	
+
+	public function updateobserva(){
+
+		$resp = array();
+		$numero = $this->input->post('numero');
+		$observa = $this->input->post('observa');
+		$idobserva = $this->input->post('idobserva');
+
+		$observa = array(
+			'id_documento' => $numero,
+	        'observacion' => $observa        
+		);
+
+		$this->db->where('id', $idobserva);
+
+    	$this->db->update('observacion_facturas', $observa);
+    	
+		$resp['success'] = true;
+		$resp['idobserva'] = $idobserva;
+		echo json_encode($resp);
+	}
+
+	public function leeobserva(){
+
+		$resp = array();
+		$idobserva = $this->input->post('idobserva');
+
+		$query = $this->db->query('SELECT * FROM observacion_facturas 
+	   	 WHERE id like "'.$idobserva.'"');
+
+	   	 if($query->num_rows()>0){
+
+	   	 	$data = array();
+			foreach ($query->result() as $row)
+			{
+
+		    $data[] = $row;
+				
+			}
+
+	   	    	
+
+	   	 }
+	   	    	   	   
+		$resp['observa'] = $row;
+		$resp['existe'] = true;
+		$resp['success'] = true;
+		echo json_encode($resp);
+		
+	}
+
+	public function saveobserva(){
+
+		$resp = array();
+		$numero = $this->input->post('numero');
+		$observa = $this->input->post('observa');
+
+		$observa = array(
+			'id_documento' => $numero,
+	        'observacion' => $observa        
+		);
+
+		$this->db->insert('observacion_facturas', $observa);
+		$idobserva = $this->db->insert_id();
+		$resp['success'] = true;
+		$resp['idobserva'] = $idobserva;
+		echo json_encode($resp);
+	}
+
 
 	public function save(){
 		
@@ -2792,6 +2862,8 @@ public function cargacontribuyentes(){
 		/*****************************************/
         $resp['success'] = true;
 		$resp['idfactura'] = $idfactura;
+
+		
 		
 		if($tipodocumento == 101 || $tipodocumento == 103 || $tipodocumento == 105){  // SI ES FACTURA ELECTRONICA O FACTURA EXENTA ELECTRONICA
 
@@ -2965,6 +3037,8 @@ public function cargacontribuyentes(){
 
 
 		}
+
+		
       
 
         echo json_encode($resp);

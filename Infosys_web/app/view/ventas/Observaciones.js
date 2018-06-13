@@ -9,7 +9,7 @@ Ext.define('Infosys_web.view.ventas.Observaciones', {
     layout: 'fit',
     autoShow: true,
     width: 380,
-    height: 390,
+    height: 250,
     modal: true,
     iconCls: 'icon-sheet',
 
@@ -37,75 +37,17 @@ Ext.define('Infosys_web.view.ventas.Observaciones', {
                         hidden:true
                     },{
                         xtype: 'textfield',
+                        name : 'id',
+                        itemId: 'ObsId',
+                        fieldLabel: 'id',
+                        hidden:true
+                    },{
+                        xtype: 'textfield',
                         name : 'valida',
                         value: "NO",
                         itemId: 'validaId',
                         fieldLabel: 'valida',
                         hidden:true
-                    },{
-                        xtype: 'fieldcontainer',
-                        layout: 'hbox',
-                        items: [{
-                            msgTarget: 'side',
-                            fieldLabel: 'Rut ',
-                            xtype: 'textfield',
-                            enableKeyEvents: true,
-                            labelWidth: 60,
-                            width: 180,
-                            name : 'rut',
-                            itemId: 'rutmId',
-                            hidden: true
-                        },{
-                            msgTarget: 'side',
-                            fieldLabel: 'Rut ',
-                            xtype: 'textfield',
-                            enableKeyEvents: true,
-                            labelWidth: 60,
-                            width: 180,
-                            name : 'rut',
-                            itemId: 'rutId'
-                        },{xtype: 'splitter'}
-                        ,{
-                            xtype: 'button',
-                            text: 'Buscar',
-                            itemId: 'validarutId',
-                            maxHeight: 25,
-                            width: 70,
-                            action: 'validar'
-                        }]
-                     },{
-                        xtype: 'textfield',
-                        fieldCls: 'required',
-                        labelWidth: 60,
-                        width: 350,
-                        height: 30,
-                        fieldLabel: 'Nombre',
-                        itemId: 'nombreId',
-                        name: 'nombre'                            
-                    },{
-                        xtype: 'textfield',
-                        fieldCls: 'required',
-                        width: 180,
-                        height: 25,
-                        fieldLabel: 'Patente Camion',
-                        itemId: 'camionId',
-                        name: 'pat_camion'                            
-                    },{
-                        xtype: 'textfield',
-                        fieldCls: 'required',
-                        width: 180,
-                        height: 25,
-                        fieldLabel: 'Patente Carro',
-                        itemId: 'carroId',
-                        name: 'pat_carro'                            
-                    },{
-                        xtype: 'textfield',
-                        fieldCls: 'required',
-                        width: 200,
-                        height: 25,
-                        fieldLabel: 'Fono',
-                        itemId: 'fonoId',
-                        name: 'fono'                            
                     },{
                         xtype: 'textareafield',
                         fieldCls: 'required',
