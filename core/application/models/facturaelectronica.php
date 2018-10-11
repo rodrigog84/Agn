@@ -1,4 +1,4 @@
-<?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+﻿<?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 /**
 * Name:  Ion Auth Model
 *
@@ -105,8 +105,10 @@ class Facturaelectronica extends CI_Model
 		  ->from($tabla_contribuyentes)
 		  ->order_by('razon_social');
 
+
 		$data = is_null($start) || is_null($limit) ? $data : $data->limit($limit,$start);
 		$query = $this->db->get();
+//			print_r($query->result()); 
 		return array('total' => $countAll, 'data' => $query->result());
 
 	 }
@@ -212,12 +214,13 @@ class Facturaelectronica extends CI_Model
 
 		$tabla_contribuyentes = $this->busca_parametro_fe('tabla_contribuyentes');
 
-		$this->db->select('c.nombres as nombre_cliente, c.rut as rut_cliente, c.direccion, m.nombre as nombre_comuna, s.nombre as nombre_ciudad, c.fono, e.nombre as giro, ifnull(ca.mail,c.e_mail) as e_mail, cs.direccion as dir_sucursal',false)
+		$this->db->select('c.nombres as nombre_cliente, c.rut as rut_cliente, c.direccion, m.nombre as nombre_comuna, s.nombre as nombre_ciudad, c.fono, e.nombre as giro, ifnull(ca.mail,c.e_mail) as e_mail, cs.direccion as dir_sucursal, d.nombre as com_sucursal',false)
 		  ->from('factura_clientes acc')
 		  ->join('clientes c','acc.id_cliente = c.id','left')
 		  ->join('cod_activ_econ e','c.id_giro = e.id','left')
 		  ->join('clientes_sucursales cs','acc.id_sucursal = cs.id','left')
-		  ->join('comuna m','c.id_comuna = m.id','left')		  
+		  ->join('comuna m','c.id_comuna = m.id','left')
+		  ->join('comuna d','cs.id_comuna = d.id','left')		  
 		  ->join('ciudad s','c.id_ciudad = s.id','left')	
 		  ->join($tabla_contribuyentes . ' ca','c.rut = concat(ca.rut,ca.dv)','left')
 		  ->where('acc.id',$id_factura)
@@ -341,6 +344,7 @@ class Facturaelectronica extends CI_Model
 	 public function exportFePDF($idfactura,$tipo_consulta,$cedible = null){
 
 	 	include $this->ruta_libredte();
+
 	 	if($tipo_consulta == 'id'){
 	 		$factura = $this->datos_dte($idfactura);
 	 	}else if($tipo_consulta == 'trackid'){
@@ -349,6 +353,7 @@ class Facturaelectronica extends CI_Model
 	 	$nombre_pdf = is_null($cedible) ? $factura->pdf : $factura->pdf_cedible;
 
 	 	//file_exists 
+
 	 	$crea_archivo = true;
 	 	if($nombre_pdf != ''){
 			$base_path = __DIR__;
