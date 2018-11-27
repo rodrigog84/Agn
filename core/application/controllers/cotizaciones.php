@@ -401,9 +401,9 @@ class Cotizaciones extends CI_Controller {
 		  <tr>
 		    <td width="197px"><img src="http://angus.agricultorestalca.cl/Agn/Infosys_web/resources/images/logo.jpg" width="150" height="136" /></td>
 		    <td width="493px" style="font-size: 14px;text-align:center;vertical-align:text-top"	>
-		    <p>ALBERTO ANTONIO GARRIDO NEIRA</p>
+		    <p>ALBERTO ENRIQUE GARRIDO NEIRA</p>
 		    <p>RUT:10.151.321-1</p>
-		    <p>Giro : Venta al por mayor de maquinarias</p>
+		    <p>Giro : VENTA DE PARTES, PIEZAS Y ACCESORIOS PARA VEHICULOS AUTOMOTORES</p>
 		    <p>Direccion : 15 Oriente 2 Sur No.2201 </p>
 		    <p>Fono : 712263600, Talca</p>
 		    </td>
@@ -643,9 +643,9 @@ class Cotizaciones extends CI_Controller {
 		  <tr>
 		   <td width="197px"><img src="http://angus.agricultorestalca.cl/Agn/Infosys_web/resources/images/logo.jpg" width="150" height="136" /></td>
 		    <td width="493px" style="font-size: 14px;text-align:center;vertical-align:text-top"	>
-		    <p>ALBERTO ANTONIO GARRIDO NEIRA</p>
+		    <p>ALBERTO ENRIQUE GARRIDO NEIRA</p>
 		    <p>RUT:10.151.321-1</p>
-		    <p>Giro : Venta al por mayor de maquinarias</p>
+		    <p>Giro : VENTA DE PARTES, PIEZAS Y ACCESORIOS PARA VEHICULOS AUTOMOTORES</p>
 		    <p>Direccion : 15 Oriente 2 Sur No.2201 </p>
 		    <p>Fono : 712263600, Talca</p>
 		    </td>
